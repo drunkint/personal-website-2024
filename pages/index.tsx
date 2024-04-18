@@ -17,7 +17,6 @@ import ScreenSizeDetector from "../components/CustomComponents/ScreenSizeDetecto
 import Maintenance from "../components/Home/Maintenance/Maintenance";
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
-  const [ShowThisCantBeReached, setShowThisCantBeReached] = useState(true);
   const [ShowMe, setShowMe] = useState(true);
   // context Variable to clearInterval
   const context = useContext(AppContext);
@@ -31,35 +30,17 @@ export default function Home() {
 
   const delta = -1;
 
-  useEffect(() => {
-    // remove the interval Cookie timer setter when
-    clearInterval(context.sharedState.userdata.timerCookieRef.current);
-    if (typeof window !== "undefined") {
-      // remove UserDataPuller project EventListeners
-      window.removeEventListener("resize", context.sharedState.userdata.windowSizeTracker.current);
-      window.removeEventListener("mousemove", context.sharedState.userdata.mousePositionTracker.current, false);
-      // remove Typing project EventListeners
-      window.removeEventListener("resize", context.sharedState.typing.eventInputLostFocus);
-      document.removeEventListener("keydown", context.sharedState.typing.keyboardEvent);
-    }
-    setTimeout(() => {
-      setShowElement(true);
-    }, secondMap(4500));
 
-    setTimeout(() => {
-      setShowThisCantBeReached(false);
-    }, secondMap(5400));
-    // ? INFORMATIONAL next function will show the component after changing the state of ShowMe
-    setTimeout(() => {
-      setShowElement(false);
-      setShowMe(true);
-      context.sharedState.finishedLoading = true;
-      context.setSharedState(context.sharedState);
-    }, secondMap(10400));
-  }, [context, context.sharedState]);
 
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
+  }, []);
+
+
+  useEffect(() => {
+    setInterval(() => {
+      setShowElement(true);
+    }, 1300);
   }, []);
 
   console.log("website is rendering...");
@@ -91,20 +72,14 @@ export default function Home() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-          {/* {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
-          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>} */}
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} delta={delta} />
           <MyName finishedLoading={context.sharedState.finishedLoading} delta={delta} />
           <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} delta={delta} />
-          {context.sharedState.finishedLoading ? <AboutMe ref={aboutRef} /> : <></>}
-          {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
-          {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
-          {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
-          {context.sharedState.finishedLoading ? (
-            <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} />
-          ) : (
-            <></>
-          )}
+          {ShowElement ? <AboutMe ref={aboutRef} /> : <></>}
+          {ShowElement ? <WhereIHaveWorked /> : <></>}
+          {ShowElement ? <SomethingIveBuilt /> : <></>}
+          {ShowElement ? <GetInTouch /> : <></>}
+          {ShowElement ? <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} />: <></>}
           {!isProd && <ScreenSizeDetector />}
         </div>
     </>

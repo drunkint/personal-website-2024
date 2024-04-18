@@ -26,7 +26,7 @@ export default function AboutMe(props) {
         {/* // ? Paragraphs */}
 
         <div className="w-full flex flex-col md:flex-row space-y-8 md:space-y-0  md:space-x-8 sm:space-x-2 ">
-          <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
+          <div className="w-full md:w-7/12 space-y-4 sm:text-base text-lg space-x-2 ">
             <div className="font-Header ">
               <span className="text-gray-400 ">
                 哈啰我是你们的小队长Angus！
@@ -127,7 +127,7 @@ export default function AboutMe(props) {
             <div className="absolute w-48 h-full  rounded  translate-x-5 translate-y-5 border-2 border-AAsecondary"></div>
             <div className="absolute w-48 h-full rounded overflow-hidden">
               <Img
-                src={"/img/Portfolio-portrait-3.jpg"}
+                src={"/img/profile.jpeg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />
