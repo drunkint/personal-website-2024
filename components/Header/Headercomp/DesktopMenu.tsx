@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import { Link as ReactScrollLink } from "react-scroll";
 
-export default function DesktopMenu(props: { finishedLoading: boolean }) {
+export default function DesktopMenu(props: { finishedLoading: boolean, delta }) {
   return (
     <div className="font-mono text-xs md:flex hidden flex-row items-center space-x-8 ">
       <motion.div
@@ -17,7 +17,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         transition={{
           type: "spring",
           duration: props.finishedLoading ? 0 : 1.2,
-          delay: props.finishedLoading ? 0 : 9.4,
+          delay: props.finishedLoading ? 0 : 1.6 + props.delta,
         }}
         className=" text-AAsecondary"
        
@@ -38,7 +38,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         transition={{
           type: "spring",
           duration: props.finishedLoading ? 0 : 1.2,
-          delay: props.finishedLoading ? 0 : 9.7,
+          delay: props.finishedLoading ? 0 : 1.9 + props.delta,
         }}
         className="text-AAsecondary"
        
@@ -60,7 +60,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         transition={{
           type: "spring",
           duration: props.finishedLoading ? 0 : 1.2,
-          delay: props.finishedLoading ? 0 : 9.8,
+          delay: props.finishedLoading ? 0 : 2 + props.delta,
         }}
         className="text-AAsecondary"
       >
@@ -82,7 +82,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         transition={{
           type: "spring",
           duration: props.finishedLoading ? 0 : 1.2,
-          delay: props.finishedLoading ? 0 : 10,
+          delay: props.finishedLoading ? 0 : 2.2 + props.delta,
         }}
         className="text-AAsecondary"
       >
@@ -103,7 +103,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         transition={{
           type: "spring",
           duration: props.finishedLoading ? 0 : 1.2,
-          delay: props.finishedLoading ? 0 : 10.2,
+          delay: props.finishedLoading ? 0 : 2.4 + props.delta,
         }}
         // onClick={()=>{router.push("/resume.pdf")}}
         className="text-AAsecondary border border-spacing-2 py-2 px-3 rounded-sm border-AAsecondary hover:bg-ResumeButtonHover"

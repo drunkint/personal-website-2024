@@ -20,13 +20,13 @@ const IconClickableWithAnimation = props => {
     </motion.div>
   );
 };
-export default function SocialMediaEmail(props: { finishedLoading: boolean }) {
+export default function SocialMediaEmail(props: { finishedLoading: boolean, delta }) {
   return (
     <>
       <motion.div
         initial={{ y: "100%" }}
         animate={{ y: "0%" }}
-        transition={{ y: { delay: props.finishedLoading ? 0 : 11, duration: props.finishedLoading ? 0 : 0.5 } }}
+        transition={{ y: { delay: props.finishedLoading ? 0 : 3 + props.delta, duration: props.finishedLoading ? 0 : 0.5 } }}
         className="z-10 fixed bottom-0 left-0  hidden lg:flex flex-row px-12 items-center justify-between  "
       >
         <div className="flex flex-col space-y-8 justify-center items-center">
@@ -49,7 +49,7 @@ export default function SocialMediaEmail(props: { finishedLoading: boolean }) {
         initial={{ y: "170%" }}
         animate={{ y: "0%" }}
         // ! change delay from 0 to 11
-        transition={{ y: { delay: props.finishedLoading ? 0 : 11, duration: props.finishedLoading ? 0 : 0.5 } }}
+        transition={{ y: { delay: props.finishedLoading ? 0 : 3 + props.delta, duration: props.finishedLoading ? 0 : 0.5 } }}
         className="z-10 fixed bottom-0 -right-10 hidden lg:flex flex-row items-center justify-between"
       >
         <div className="flex flex-col space-y-24 justify-center items-center">

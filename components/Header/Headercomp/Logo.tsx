@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
-export default function Logo(props: { finishedLoading: boolean }) {
+export default function Logo(props: { finishedLoading: boolean, delta: number }) {
   return (
     <>
       <motion.div
@@ -8,8 +8,8 @@ export default function Logo(props: { finishedLoading: boolean }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           type: "spring",
-          y: { delay: props.finishedLoading ? 0 : 8, duration: 0 },
-          opacity: { delay: props.finishedLoading ? 0 : 8, duration: 0 },
+          y: { delay: props.finishedLoading ? 0 : 0 + props.delta, duration: 0 },
+          opacity: { delay: props.finishedLoading ? 0 : 0 + props.delta, duration: 0 },
         }}
         className=" relative h-12 w-10 "
       >
@@ -17,7 +17,7 @@ export default function Logo(props: { finishedLoading: boolean }) {
           initial={{ x: 1 }}
           className="absolute h-full w-full flex justify-center items-center text-lg font-Header text-AAsecondary"
         >
-          A
+          CB
         </motion.span>
 
         <motion.div animate={{ rotate: -30, y: 5 }} className="h-1 w-6 rounded bg-AAsecondary"></motion.div>

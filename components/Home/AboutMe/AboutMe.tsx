@@ -3,8 +3,8 @@ import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const technologies = [
-    ["Next.js", "JavaScript (ES6+)", "Tailwind CSS", "Ether.js", "Solidity"],
-    ["Node.js", "TypeScript", "Framer Motion", "react-moralis", "web3.js"],
+    ["1点前睡觉（没有一次成功）", "听谐音笑话", "自己煮饭"],
+    ["听音乐（日/独立）", "抱石", "看小宝宝短视频"],
   ];
   return (
     <div id="aboutSection" data-aos="fade-up" className="snap-start flex flex-col  items-center py-20 bg-AAprimary">
@@ -18,7 +18,7 @@ export default function AboutMe(props) {
             <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"} />
             <span className="text-AAsecondary font-Header text-sm  sm:text-xl"> 01.</span>
             <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider text-lg sm:text-2xl pl-4">
-              About Me
+             自我介绍、想说的话
             </span>
           </div>
           <div className="bg-gray-400 h-[0.2px] w-full sm:w-72 ml-4"></div>
@@ -29,21 +29,22 @@ export default function AboutMe(props) {
           <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                Hello! My name is Abdellatif, and I am a passionate software engineer and problem solver, dedicated to
-                creating impactful codes that thrive on the internet. My journey in computer science began in 2009 when
-                I delved into the world of Ethical Hacking using BackTrack OS. Little did I know that programming skills
-                would become essential in pursuing this interest, marking the start of my programming journey.
+                哈啰我是你们的小队长Angus！
               </span>
             </div>
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                Since pursuing my engineering degree, my career has taken me through diverse industries, allowing me to
+                我是UTSC MCF (University of Toronto Mandarin Christian Fellowship) 的人，目前读大五CS，正在因为Coop而持续延毕中🫠
+
+                
+
+                {/* Since pursuing my engineering degree, my career has taken me through diverse industries, allowing me to
                 refine my expertise in desktop and web development. In the realm of{" "}
                 <span className="text-AAsecondary">web3</span>, I am dedicated to pushing boundaries and driving
                 advancements. With experience working alongside esteemed organizations like{" "}
                 <span className="text-AAsecondary">ENS Vision</span>, where I played a key role in releasing v2 of{" "}
                 <span className="text-AAsecondary">ENS Vision Marketplace</span> , my passion for web3 and continuous
-                learning drives me to make a positive impact and advance technology.
+                learning drives me to make a positive impact and advance technology. */}
               </span>
             </div>
             {/* <div className="font-Header tracking-wide">
@@ -61,7 +62,7 @@ export default function AboutMe(props) {
 
             <div className="font-Header tracking-wide">
               <span className="text-gray-400  ">
-                Here are a few technologies I&apos;ve been working with recently :
+                以下是一些我引以为傲的兴趣：
               </span>
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
@@ -90,6 +91,19 @@ export default function AboutMe(props) {
                 </div>
               </div>
             </div>
+            <div className="font-Header ">
+              <span className="text-gray-400 ">
+                我去年来参加精兵营一开始是抱着“好累哦不想来”的心态 —— 要不是我的好朋友Henson逼我来，我周末就会在家耍废废。
+                但后来发现其实是一个蛮有收获的经验。
+                除了紧凑的课程外，还可以跟一群不认识的年轻基督徒们bound，甚至是在Queens活水团期的敬拜中嚎啕大哭（他们超棒超有恩膏的）。
+              </span>
+            </div>
+            <div className="font-Header ">
+              <span className="text-gray-400 ">
+                总之呢！除了课程之外，鼓励大家多多认识人，听听看他们平常团期里都做什么，以及他们把时间都花在什么事上。
+                这样就可以了解他们以及他们所属的团契，除了多了一个好朋友之外或许能给你团期带来什么启发哦～
+              </span>
+            </div>
           </div>
           {/* // ? Image in Desktop and Tablet */}
           <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">
@@ -102,7 +116,7 @@ export default function AboutMe(props) {
             <div className="absolute w-5/6 h-5/6  rounded overflow-hidden">
               <div className="absolute w-full h-full group-hover:opacity-0 bg-AAsecondary opacity-10 duration-300 rounded overflow-hidden"></div>
               <Img
-                src={"/img/Portfolio-portrait-3.jpg"}
+                src={"/img/profile.jpeg"}
                 className={"object-contain rounded-lg"}
                 alt="My Image Not Found"
               />

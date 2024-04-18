@@ -18,11 +18,18 @@ import Maintenance from "../components/Home/Maintenance/Maintenance";
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
   const [ShowThisCantBeReached, setShowThisCantBeReached] = useState(true);
-  const [ShowMe, setShowMe] = useState(false);
+  const [ShowMe, setShowMe] = useState(true);
   // context Variable to clearInterval
   const context = useContext(AppContext);
   const aboutRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
+  const isStartAnimationOn = false;
+
+  const secondMap = (second) => {
+    return isStartAnimationOn ? second : 0;
+  }
+
+  const delta = -1;
 
   useEffect(() => {
     // remove the interval Cookie timer setter when
@@ -37,18 +44,18 @@ export default function Home() {
     }
     setTimeout(() => {
       setShowElement(true);
-    }, 4500);
+    }, secondMap(4500));
 
     setTimeout(() => {
       setShowThisCantBeReached(false);
-    }, 5400);
+    }, secondMap(5400));
     // ? INFORMATIONAL next function will show the component after changing the state of ShowMe
     setTimeout(() => {
       setShowElement(false);
       setShowMe(true);
       context.sharedState.finishedLoading = true;
       context.setSharedState(context.sharedState);
-    }, 10400);
+    }, secondMap(10400));
   }, [context, context.sharedState]);
 
   useEffect(() => {
@@ -57,7 +64,7 @@ export default function Home() {
 
   console.log("website is rendering...");
   const meta = {
-    title: "Abdellatif Anaflous - Software Engineer",
+    title: "精兵营！",
     description: `I've been working on Software development for 5 years straight. Get in touch with me to know more.`,
     image: "/titofCercle.png",
     type: "website",
@@ -84,11 +91,11 @@ export default function Home() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
-          {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
-          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>}
-          <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} />
-          <MyName finishedLoading={context.sharedState.finishedLoading} />
-          <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} />
+          {/* {context.sharedState.finishedLoading ? <></> : ShowThisCantBeReached ? <ThisCantBeReached /> : <></>}
+          {context.sharedState.finishedLoading ? <></> : ShowElement ? <Startup /> : <></>} */}
+          <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} delta={delta} />
+          <MyName finishedLoading={context.sharedState.finishedLoading} delta={delta} />
+          <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} delta={delta} />
           {context.sharedState.finishedLoading ? <AboutMe ref={aboutRef} /> : <></>}
           {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
           {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}

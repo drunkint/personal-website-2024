@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-export default function MyName(props: { finishedLoading: boolean }) {
+export default function MyName(props: { finishedLoading: boolean, delta }) {
   const router = useRouter();
   return (
     <div
@@ -13,42 +13,42 @@ export default function MyName(props: { finishedLoading: boolean }) {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          opacity: { delay: props.finishedLoading ? 0 : 10.4, duration: props.finishedLoading ? 0 : 0.2 },
-          y: { delay: props.finishedLoading ? 0 : 10.4, duration: props.finishedLoading ? 0 : 0.2 },
+          opacity: { delay: props.finishedLoading ? 0 : 2.4 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
+          y: { delay: props.finishedLoading ? 0 : 2.4 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
         className="text-AAsecondary font-mono"
       >
-        Hi, my name is
+        哈啰，欢迎来到精兵营的
       </motion.span>
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          opacity: { delay: props.finishedLoading ? 0 : 10.5, duration: props.finishedLoading ? 0 : 0.2 },
-          y: { delay: props.finishedLoading ? 0 : 10.5, duration: props.finishedLoading ? 0 : 0.2 },
+          opacity: { delay: props.finishedLoading ? 0 : 2.5 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
+          y: { delay: props.finishedLoading ? 0 : 2.5 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
         className="text-gray-300 font-bold text-3xl lg:text-7xl sm:text-5xl md:text-6xl mt-4"
       >
-        Anaflous Abdellatif.
+        第X小队！
       </motion.h1>
       <motion.h2
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          opacity: { delay: props.finishedLoading ? 0 : 10.6, duration: props.finishedLoading ? 0 : 0.2 },
-          y: { delay: props.finishedLoading ? 0 : 10.6, duration: props.finishedLoading ? 0 : 0.2 },
+          opacity: { delay: props.finishedLoading ? 0 : 2.6 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
+          y: { delay: props.finishedLoading ? 0 : 2.6 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
         className="text-gray-400 font-bold text-3xl lg:text-7xl sm:text-5xl md:text-6xl mt-4"
       >
-        I make ideas & things alive.
+        这边我将带大家过一些介绍～
       </motion.h2>
 
       <motion.h3
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          opacity: { delay: props.finishedLoading ? 0 : 10.7, duration: props.finishedLoading ? 0 : 0.2 },
-          y: { delay: props.finishedLoading ? 0 : 10.7, duration: props.finishedLoading ? 0 : 0.2 },
+          opacity: { delay: props.finishedLoading ? 0 : 2.7 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
+          y: { delay: props.finishedLoading ? 0 : 2.7 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
@@ -66,14 +66,14 @@ export default function MyName(props: { finishedLoading: boolean }) {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          opacity: { delay: props.finishedLoading ? 0 : 10.8, duration: props.finishedLoading ? 0 : 0.2 },
-          y: { delay: props.finishedLoading ? 0 : 10.8, duration: props.finishedLoading ? 0 : 0.2 },
+          opacity: { delay: props.finishedLoading ? 0 : 2.8 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
+          y: { delay: props.finishedLoading ? 0 : 2.8 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
         className="mt-12"
       >
         <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
           <button className="bg-AAprimary text-AAsecondary border rounded px-4 sm:px-8 py-3 sm:py-4 border-AAsecondary">
-            Check out my resume!
+            点击我查看行程表：）
           </button>
         </a>
       </motion.div>
