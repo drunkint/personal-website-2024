@@ -40,11 +40,11 @@ export default function WhereIHaveWorked() {
           <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 03.</span>
         </div>
         <span className="text-gray-200 opacity-85 font-bold tracking-wider text-lg md:text-2xl px-3">
-          注意事项
+          Angus正式的爱心小叮咛从这边开始lol
         </span>
-        <span className="text-gray-400 opacity-85 font-bold tracking-wider text-lg md:text-2xl">
+        {/* <span className="text-gray-400 opacity-85 font-bold tracking-wider text-lg md:text-2xl">
           （手机请向左滑标题）
-        </span>
+        </span> */}
         <div className="bg-gray-400 h-[0.2px] w-16 sm:w-44 md:w-80"></div>
       </section>
       {/* // ? Where I've Worked Content section */}
@@ -68,10 +68,10 @@ const CompaniesBar = props => {
     true,
     false,
     false,
-    false,
-    false,
-    false,
-    false,
+    // false,
+    // false,
+    // false,
+    // false,
   ]);
   const CompanyButton = props => {
     return (
@@ -105,7 +105,9 @@ const CompaniesBar = props => {
     >
       {/* // ? left bar Holder */}
       <div
-        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-[297px] translate-y-1 md:w-0.5  
+        // className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-[297px] translate-y-1 md:w-0.5  
+        // rounded md:order-1 order-2  "
+        className=" hidden md:block bg-gray-500 relative h-0.5 w-34 md:h-[121px] translate-y-1 md:w-0.5  
         rounded md:order-1 order-2  "
       >
         {/* // ? animated left bar */}
@@ -124,7 +126,8 @@ const CompaniesBar = props => {
             BarPosition={-12}
             BarAvobePosition={1}
             DescriptionJob="BeforeYouCome"
-            CompanyNameBackgroundColorGreen={[true,false, false, false, false, false]}
+            // CompanyNameBackgroundColorGreen={[true,false, false, false, false, false]}
+            CompanyNameBackgroundColorGreen={[true,false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
@@ -133,7 +136,8 @@ const CompaniesBar = props => {
             BarPosition={32}
             BarAvobePosition={129}
             DescriptionJob="ToBring"
-            CompanyNameBackgroundColorGreen={[false,true, false, false, false, false]}
+            // CompanyNameBackgroundColorGreen={[false,true, false, false, false, false]}
+            CompanyNameBackgroundColorGreen={[false,true, false,]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
@@ -142,10 +146,11 @@ const CompaniesBar = props => {
             BarPosition={76}
             BarAvobePosition={257}
             DescriptionJob="WeDontHave"
-            CompanyNameBackgroundColorGreen={[false,false, true, false, false, false]}
+            // CompanyNameBackgroundColorGreen={[false,false, true, false, false, false]}
+            CompanyNameBackgroundColorGreen={[false,false, true,]}
             setDescriptionJob={props.setDescriptionJob}
           />
-          <CompanyButton
+          {/* <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={3}
             CompanyName="IdealFresh"
             BarPosition={120}
@@ -180,7 +185,7 @@ const CompaniesBar = props => {
             DescriptionJob="Fantasia"
             CompanyNameBackgroundColorGreen={[false, false, false, false, false, false, true]}
             setDescriptionJob={props.setDescriptionJob}
-          />
+          /> */}
         </div>
         <div className="block md:hidden h-0.5 rounded bg-gray-500">
           <motion.div animate={{ x: barAbovePosition }} className="w-[128px] h-0.5 rounded bg-AAsecondary"></motion.div>
