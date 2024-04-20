@@ -35,7 +35,7 @@ export default function AboutMe(props) {
             </div>
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                我是UTSC MCF (University of Toronto Mandarin Christian Fellowship) 的人，目前读大五CS，正在因为Coop而持续延毕中🫠
+                我來自UTSC MCF，目前读大五CS，正在因为Coop而持续延毕中🫠
                 {/* Since pursuing my engineering degree, my career has taken me through diverse industries, allowing me to
                 refine my expertise in desktop and web development. In the realm of{" "}
                 <span className="text-AAsecondary">web3</span>, I am dedicated to pushing boundaries and driving
