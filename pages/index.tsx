@@ -15,6 +15,7 @@ import "aos/dist/aos.css";
 import Head from "next/head";
 import ScreenSizeDetector from "../components/CustomComponents/ScreenSizeDetector";
 import Maintenance from "../components/Home/Maintenance/Maintenance";
+import AboutGrace from "../components/Home/AboutGrace/AboutGrace";
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
   const [ShowMe, setShowMe] = useState(true);
@@ -69,6 +70,7 @@ export default function Home() {
           <MyName finishedLoading={context.sharedState.finishedLoading} delta={delta} />
           <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} delta={delta} />
           {ShowElement ? <AboutMe ref={aboutRef} /> : <></>}
+          {ShowElement ? <AboutGrace ref={aboutRef} /> : <></>}
           {ShowElement ? <WhereIHaveWorked /> : <></>}
           {ShowElement ? <SomethingIveBuilt /> : <></>}
           {ShowElement ? <GetInTouch /> : <></>}
