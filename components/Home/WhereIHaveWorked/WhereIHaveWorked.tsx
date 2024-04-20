@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import ArrowIcon from "../../Icons/ArrowIcon";
-import TrouveTavoie from "./Descriptions/TrouveTavoie";
-import FeverTokens from "./Descriptions/FeverTokens";
+import BeforeYouCome from "./Descriptions/BeforeYouCome";
+import WeDontHave from "./Descriptions/WeDontHave";
 import IdealFresh from "./Descriptions/IdealFresh";
 import AdvancedAgroManagement from "./Descriptions/AdvancedAgroManagement";
 import Fantasia from "./Descriptions/Fantasia";
@@ -16,10 +16,10 @@ export default function WhereIHaveWorked() {
     switch (DescriptionJob) {
       case "ToBring":
         return <ToBring  />;
-      case "TrouveTavoie":
-        return <TrouveTavoie />;
-      case "FeverTokens":
-        return <FeverTokens />;
+      case "BeforeYouCome":
+        return <BeforeYouCome />;
+      case "WeDontHave":
+        return <WeDontHave />;
       case "IdealFresh":
         return <IdealFresh />;
       case "Advanced Agro Management":
@@ -30,7 +30,7 @@ export default function WhereIHaveWorked() {
         return <SuperBerry />;
     }
   };
-  const [DescriptionJob, setDescriptionJob] = React.useState("ToBring");
+  const [DescriptionJob, setDescriptionJob] = React.useState("BeforeYouCome");
   return (
     <div data-aos="fade-up" className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary">
       {/* // ? Title "Where I've Worked" */}
@@ -43,7 +43,7 @@ export default function WhereIHaveWorked() {
           注意事项
         </span>
         <span className="text-gray-400 opacity-85 font-bold tracking-wider text-lg md:text-2xl">
-          （手机请向右滑标题）
+          （手机请向左滑标题）
         </span>
         <div className="bg-gray-400 h-[0.2px] w-16 sm:w-44 md:w-80"></div>
       </section>
@@ -120,28 +120,28 @@ const CompaniesBar = props => {
         <div className="flex flex-row md:flex-col">
         <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={0}
-            CompanyName="What to Bring"
+            CompanyName="Before You Come"
             BarPosition={-12}
             BarAvobePosition={1}
-            DescriptionJob="ToBring"
+            DescriptionJob="BeforeYouCome"
             CompanyNameBackgroundColorGreen={[true,false, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
-            CompanyName="TrouveTavoie"
+            CompanyName="What to Bring"
             BarPosition={32}
             BarAvobePosition={129}
-            DescriptionJob="TrouveTavoie"
+            DescriptionJob="ToBring"
             CompanyNameBackgroundColorGreen={[false,true, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="FeverTokens"
+            CompanyName="We Don't Have"
             BarPosition={76}
             BarAvobePosition={257}
-            DescriptionJob="FeverTokens"
+            DescriptionJob="WeDontHave"
             CompanyNameBackgroundColorGreen={[false,false, true, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
