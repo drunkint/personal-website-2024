@@ -23,15 +23,8 @@ export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
   const isStartAnimationOn = false;
-
-  const secondMap = (second) => {
-    return isStartAnimationOn ? second : 0;
-  }
-
-  const delta = -1;
-
-
-
+  const delta = -2;
+  
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
   }, []);
@@ -40,7 +33,7 @@ export default function Home() {
   useEffect(() => {
     setInterval(() => {
       setShowElement(true);
-    }, 1300);
+    }, 800);
   }, []);
 
   console.log("website is rendering...");
