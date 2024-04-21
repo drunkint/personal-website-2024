@@ -8,7 +8,7 @@ export default function WeDontHave() {
       keywords: ["没有Tap Machine", "买书", "带Cash或直接Etransfer"],
     },
     {
-      text: "营会没有宵夜。所以嘴馋的话记得自己带零食，并且不要留下碎屑等痕迹。",
+      text: "营会没有宵夜。所以如果想要慷慨的跟大家分享的话请记得带零食，并且不要留下碎屑等痕迹。",
       keywords: ["没有宵夜", "自己带零食", "不要留下碎屑"],
     },
     {
@@ -16,7 +16,7 @@ export default function WeDontHave() {
       keywords: ["没有Wifi", "自备流量"],
     },
     {
-      text: "营会尽量不要带贵重物品（如ipad、笔电、狗等等）。如果有东西坏了或不见了，CCEF主办方不会负任何责任（没错这在Waiver上，而且你签了）",
+      text: "营会尽量不要带贵重物品（如ipad、笔电、狗等等）。如果有东西坏了或不见了，CCEF主办方不会负任何责任（但我们可以为你祷告）",
       keywords: ["不要带贵重物品", "ipad、笔电、狗", "CCEF主办方不会负任何责任"],
     },
   ];
