@@ -14,10 +14,10 @@ export default function WhereIHaveWorked() {
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
-      case "ToBring":
-        return <ToBring  />;
       case "BeforeYouCome":
         return <BeforeYouCome />;
+      case "ToBring":
+        return <ToBring  />;
       case "WeDontHave":
         return <WeDontHave />;
       case "IdealFresh":

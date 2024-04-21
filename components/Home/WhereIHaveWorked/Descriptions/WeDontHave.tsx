@@ -26,7 +26,7 @@ export default function WeDontHave() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-lg font-Arimo tracking-wide">
-            营会没有这些东西
+            营会没有这些东西QWQ
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-md text-md">

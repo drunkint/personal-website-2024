@@ -79,7 +79,7 @@ export default function SomethingIveBuilt() {
               <div className="flex flex-col w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
                 <div className="flex flex-row">
                   <ArrowIcon className={" h-7 w-6 text-AAsecondary flex-none"} />
-                  <span className="md:text-gray-200 text-xl">
+                  <span className="text-gray-200 text-xl">
                     男生宿舍 Link：
                     </span>
                   <a href="https://ontariochristiancamp.ca/rentals/facilities/drost-lodge/" target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,7 @@ export default function SomethingIveBuilt() {
                 </div>
                 <div className="flex flex-row">
                   <ArrowIcon className={" h-7 w-6 text-AAsecondary flex-none"} />
-                  <span className="md:text-gray-200 text-xl">
+                  <span className="text-gray-200 text-xl">
                     女生宿舍 Link： 
                     </span>
                   <a href="https://ontariochristiancamp.ca/rentals/facilities/centre-hall/" target="_blank" rel="noopener noreferrer">

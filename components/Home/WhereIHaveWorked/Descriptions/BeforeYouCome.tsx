@@ -13,9 +13,17 @@ export default function BeforeYouCome() {
       keywords: ["有司机"],
     },
     {
+      text: "如果不能准时下午两点前到的话，要跟我说哦～营地很大，很容易迷路。",
+      keywords: ["有司机"],
+    },
+    {
       text: "确认你们写在报名表单的英文名字是你们想要印在名牌上面的英文名字。比如说，我叫Angus，但我可能在报名表单的First Name 那边写XuShen（拼音）。但我平常想被叫做Angus，所以这时候要跟我反应！",
       keywords: ['报名表单的英文名字', '印在名牌上面的英文名字'],
     },
+    {
+      text: "各位，祷告的力量是大的。请大家从现在开始每天为自己、小组、讲员和营会来祷告，求神保守每个环节都可以顺利，也祷告自己有一颗敞开学习的心，在营会中有满满的收获！",
+      keywords: ['祷告的力量是大的', '敞开学习的心', '为自己、小组、讲员和营会来祷告'],
+    }
   ];
 
   return (
@@ -24,7 +32,7 @@ export default function BeforeYouCome() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-lg font-Arimo tracking-wide">
-            来之前记得完成这些东西！
+            来之前记得完成这些东西～
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-md text-md">
