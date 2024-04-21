@@ -52,6 +52,7 @@ export default function BeforeYouCome() {
                     href="https://docuseal.co/d/wcy8CGBrPXVPHL" 
                     target="_blank"
                     className="sm:text-md text-md text-AAsecondary"
+                    rel="noopener noreferrer"
                     >
                       Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL
                     </a>
