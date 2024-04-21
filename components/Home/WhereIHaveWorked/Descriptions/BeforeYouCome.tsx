@@ -5,8 +5,8 @@ import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
 export default function BeforeYouCome() {
   const tasks = [
     {
-      text: "记得填写 Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL",
-      keywords: ["Waiver: "],
+      text: "记得填写",
+      keywords: [""],
     },
     {
       text: "确认你有司机，不然等着叫Uber吧：）如果不确定的话跟我说！",
@@ -47,6 +47,15 @@ export default function BeforeYouCome() {
                     __html: getTasksTextWithHighlightedKeyword(item.text, item.keywords),
                   }}
                 ></span>
+                {index === 0 ? 
+                  <a 
+                    href="https://docuseal.co/d/wcy8CGBrPXVPHL" 
+                    target="_blank"
+                    className="sm:text-md text-md text-AAsecondary"
+                    >
+                      Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL
+                    </a>
+                  : <></>}
               </div>
             );
           })}
