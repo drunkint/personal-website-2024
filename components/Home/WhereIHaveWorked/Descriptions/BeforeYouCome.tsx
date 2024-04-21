@@ -39,7 +39,7 @@ export default function BeforeYouCome() {
           {/* Tasks Description 1 */}
           {tasks.map((item, index) => {
             return (
-              <div key={index + 1} className="flex flex-row space-x-1">
+              <div key={index} className="flex flex-row space-x-1">
                 <ArrowIcon className={" h-5 w-4 text-AAsecondary flex-none"} />
                 <span
                   className="text-gray-400 sm:text-md text-md"
