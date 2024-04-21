@@ -5,7 +5,7 @@ import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
 export default function BeforeYouCome() {
   const tasks = [
     {
-      text: "记得填写",
+      text: "记得填写Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL （不知道为什么把这个弄成Link的话手机看会有问题，但电脑不会🫠）",
       keywords: [""],
     },
     {
@@ -47,7 +47,7 @@ export default function BeforeYouCome() {
                     __html: getTasksTextWithHighlightedKeyword(item.text, item.keywords),
                   }}
                 ></span>
-                {index === 0 ? 
+                {/* {index === 0 ? 
                   <a 
                     href="https://docuseal.co/d/wcy8CGBrPXVPHL" 
                     target="_blank"
@@ -56,7 +56,7 @@ export default function BeforeYouCome() {
                     >
                       Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL
                     </a>
-                  : <></>}
+                  : <></>} */}
               </div>
             );
           })}
