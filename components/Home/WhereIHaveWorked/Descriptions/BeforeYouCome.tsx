@@ -5,8 +5,8 @@ import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
 export default function BeforeYouCome() {
   const tasks = [
     {
-      text: "记得填写Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL （不知道为什么把这个弄成Link的话手机看会有问题，但电脑不会🫠）",
-      keywords: [""],
+      text: "记得填写Waiver: https://docuseal.co/d/wcy8CGBrPXVPHL",
+      keywords: ["https://docuseal.co/d/wcy8CGBrPXVPHL"],
     },
     {
       text: "确认你有司机，不然等着叫Uber吧：）如果不确定的话跟我说！",
