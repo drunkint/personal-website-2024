@@ -41,7 +41,7 @@ export default function Home() {
   const meta = {
     title: "精兵营第四組！",
     description: `安格斯的小叮嚀`,
-    image: "/titofCercle.png",
+    image: "/thumbnail.png",
     type: "website",
   };
   const isProd = process.env.NODE_ENV === "production";
