@@ -39,12 +39,12 @@ export default function AboutMe(props) {
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
               <div className="flex flex-row space-x-2 items-center">
-                <div className="flex flex-col space-y-4 sm:text-base text-sm">
+                <div className="flex flex-col space-y-4 sm:text-md text-md">
                   {angusInterests[0].map((tech, index) => {
                     return (
                       <div key={index} className="flex flex-row items-center space-x-2">
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-sm text-xs">{tech}</span>
+                        <span className="text-gray-400 sm:text-md text-md">{tech}</span>
                       </div>
                     );
                   })}

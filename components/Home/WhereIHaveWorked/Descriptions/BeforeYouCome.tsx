@@ -23,28 +23,28 @@ export default function BeforeYouCome() {
       <div className="flex flex-col space-y-5 max-w-xl px-4 md:px-0">
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
-          <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
+          <span className="text-gray-100 sm:text-lg text-lg font-Arimo tracking-wide">
             来之前记得完成这些东西！
           </span>
         </div>
-        <div className="flex flex-col space-y-4 sm:text-sm text-xs">
+        <div className="flex flex-col space-y-4 sm:text-md text-md">
           {/* Tasks Description 1 */}
           {tasks.map((item, index) => {
             return (
               <div key={index + 1} className="flex flex-row space-x-1">
                 <ArrowIcon className={" h-5 w-4 text-AAsecondary flex-none"} />
                 <span
-                  className="text-gray-400 sm:text-sm text-xs"
+                  className="text-gray-400 sm:text-md text-md"
                   dangerouslySetInnerHTML={{
                     __html: getTasksTextWithHighlightedKeyword(item.text, item.keywords),
                   }}
                 ></span>
-                {index === 0 ? <span className="text-AAsecondary font-mono text-xs sm:text-sm hover:cursor-pointer" 
-            // set on click to open the website
-            onClick={() => window.open("https://docuseal.co/d/wcy8CGBrPXVPHL/", "_blank")}
-            >
-              https://docuseal.co/d/wcy8CGBrPXVPHL
-            </span> : <></>}
+                {index === 0 ? <span className="text-AAsecondary font-mono text-md sm:text-md hover:cursor-pointer" 
+                // set on click to open the website
+                onClick={() => window.open("https://docuseal.co/d/wcy8CGBrPXVPHL/", "_blank")}
+                >
+                  https://docuseal.co/d/wcy8CGBrPXVPHL
+                </span> : <></>}
               </div>
             );
           })}
