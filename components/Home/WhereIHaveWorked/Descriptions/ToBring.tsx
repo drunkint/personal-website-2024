@@ -32,7 +32,7 @@ export default function ToBring() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-lg font-Arimo tracking-wide">
-            携带物品清单
+            装备栏物品一览
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-md text-md">

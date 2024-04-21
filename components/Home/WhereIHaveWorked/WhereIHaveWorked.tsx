@@ -98,7 +98,7 @@ const CompaniesBar = props => {
 
   return (
     <div
-      id="WhereIhaveWorkedSection"
+      id="remindersSection"
       className=" flex flex-col md:flex-row  w-screen lg:w-auto 
       overflow-auto scrollbar-hide md:overflow-hidden pb-4 md:pb-0 justify-start
        sm:justify-center items-start sm:items-center"
