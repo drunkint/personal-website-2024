@@ -47,12 +47,13 @@ export default function BeforeYouCome() {
                     __html: getTasksTextWithHighlightedKeyword(item.text, item.keywords),
                   }}
                 ></span>
-                {index === 0 ? <span className="text-AAsecondary font-mono text-md sm:text-md hover:cursor-pointer" 
-                // set on click to open the website
-                onClick={() => window.open("https://docuseal.co/d/wcy8CGBrPXVPHL/", "_blank")}
-                >
-                  https://docuseal.co/d/wcy8CGBrPXVPHL
-                </span> : <></>}
+                {/* {index === 0 ? 
+                  <span className="text-AAsecondary font-mono text-md sm:text-md hover:cursor-pointer" 
+                  // set on click to open the website
+                  onClick={() => window.open("https://docuseal.co/d/wcy8CGBrPXVPHL/", "_blank")}
+                  >
+                    https://docuseal.co/d/wcy8CGBrPXVPHL
+                  </span> : <></>} */}
               </div>
             );
           })}
