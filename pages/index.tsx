@@ -41,7 +41,7 @@ export default function Home() {
   const meta = {
     title: "精兵营第四組！",
     description: `安格斯的小叮嚀`,
-    image: "/thumbnail.png",
+    image: "/img/thumbnail.png",
     type: "website",
   };
   const isProd = process.env.NODE_ENV === "production";
@@ -55,7 +55,7 @@ export default function Home() {
         <meta property="og:url" content={`https://cb-team4.vercel.app/`} />
         <link rel="canonical" href={`https://cb-team4.vercel.app/`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Manu Arora" />
+        <meta property="og:site_name" content="精兵营第四组" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
