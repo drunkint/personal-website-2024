@@ -22,7 +22,7 @@ const MobileMenu = props => {
         justify-center items-center space-y-8 font-sans"
         >
           <Link
-            to="aboutSection"
+            to="aboutMeSection"
             spy={true}
             smooth={true}
             offset={-50}
@@ -35,11 +35,11 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              About
+              小组长介绍
             </span>
           </Link>
           <Link
-            to="WhereIhaveWorkedSection"
+            to="aboutGraceSection"
             spy={true}
             smooth={true}
             offset={-250}
@@ -52,11 +52,11 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              Experience
+              辅导介绍
             </span>
           </Link>
           <Link
-            to="SomethingIveBuiltSection"
+            to="remindersSection"
             spy={true}
             smooth={true}
             offset={100}
@@ -69,11 +69,11 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              Work
+              Angus小叮咛
             </span>
           </Link>
           <Link
-            to="GetInTouchSection"
+            to="otherInfoSection"
             spy={true}
             smooth={true}
             offset={100}
@@ -86,7 +86,7 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              Contact
+              其他资料
             </span>
           </Link>
           <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
