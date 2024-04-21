@@ -4,7 +4,7 @@ import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const angusInterests = [
     ["1点前睡觉（没有一次成功）", "听谐音笑话", "自己煮饭"],
-    ["听音乐（日/独立）", "抱石", "看小宝宝短视频"],
+    ["听音乐（日/独立）", "抱石", "看小宝宝短视频&动漫"],
   ];
   const angusInterestsCombined = angusInterests.flat(1);
   return (
@@ -91,6 +91,12 @@ export default function AboutMe(props) {
             </div>
             <div className="font-Header ">
               <span className="text-gray-400 ">
+                很开心能认识大家，期待我们可以一起在这次的营队中很有得着！٩(^ᗜ^ )و ´-
+              </span>
+            </div>
+            {/* Moved to beginning */}
+            {/* <div className="font-Header ">
+              <span className="text-gray-400 ">
                 我去年来参加精兵营一开始是抱着“好累哦不想来”的心态 —— 要不是我的好朋友Henson逼我来，我周末就会在家耍废废。
                 但后来发现其实是一个蛮有收获的经验。
                 除了紧凑的课程外，还可以跟一群不认识的年轻基督徒们bound，甚至是在Queens活水团期的敬拜中嚎啕大哭（他们超棒超有恩膏的）。
@@ -101,7 +107,7 @@ export default function AboutMe(props) {
                 总之呢！除了课程之外，鼓励大家多多认识人，听听看他们平常团期里都做什么，以及他们把时间都花在什么事上。
                 这样就可以了解他们以及他们所属的团契，除了多了一个好朋友之外或许能给你团期带来什么启发哦～
               </span>
-            </div>
+            </div> */}
           </div>
           {/* // ? Image in Desktop and Tablet */}
           <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">

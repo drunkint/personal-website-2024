@@ -52,13 +52,25 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
         }}
         className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
       >
-        I&apos;m a <span className="text-AAsecondary">software engineer</span>, i possess strong problem-solving skills and
+        <div>
+        我去年来参加精兵营一开始是抱着“好累哦不想来”的心态 —— 要不是我的好朋友Henson逼我来，我周末就会在家耍废废。
+        但后来发现其实是一个蛮有收获的经验。
+        除了紧凑的课程外，还可以跟一群不认识的年轻基督徒们bound，甚至是在Queens活水团期的敬拜中嚎啕大哭（他们超棒超有恩膏的）。
+        </div>
+          <br></br>
+        <div>
+        总之呢！除了课程之外，鼓励大家多多认识人，听听看他们平常团期里都做什么，以及他们把时间都花在什么事上。
+        这样就可以了解他们以及他们所属的团契，除了多了一个好朋友之外或许能给你团期带来什么启发哦～
+        </div>
+        
+        
+        {/* I&apos;m a <span className="text-AAsecondary">software engineer</span>, i possess strong problem-solving skills and
         specialize in crafting exceptional <br className="2xl:block hidden" />
         digital experiences. My current area of focus is in the <span className="text-AAsecondary">web3 domain</span>,
         where I actively engage in developing <br className="2xl:block hidden"/>
         and designing immersive <span className="text-AAsecondary">web3 applications</span>. This involves working with{" "}
         <span className="text-AAsecondary">Smart Contracts</span>  on the{" "}
-        <span className="text-AAsecondary">Blockchain</span>. 
+        <span className="text-AAsecondary">Blockchain</span>.  */}
         {/* <br className="2xl:block hidden" />creating and deploying them, as well as implementing the
         front-end components to enable seamless user interactions. */}
       </motion.h3>
