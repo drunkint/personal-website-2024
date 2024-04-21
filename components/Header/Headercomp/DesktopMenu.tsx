@@ -23,7 +23,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean, delta }) 
        
       >
         <ReactScrollLink to="aboutMeSection" spy={true} smooth={true} offset={-100} duration={200}>
-          &gt; 01. <span className="text-white hover:cursor-pointer hover:text-AAsecondary duration-300">小组长自我介绍</span>
+          &gt; 01. <span className="text-white hover:cursor-pointer hover:text-AAsecondary duration-300">小组长介绍</span>
         </ReactScrollLink>
       </motion.div>
       <motion.div
@@ -45,7 +45,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean, delta }) 
       >
         <ReactScrollLink to="aboutGraceSection" spy={true} smooth={true} offset={-300} duration={200}>
           &gt; 02.{" "}
-          <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">辅导自我介绍</span>
+          <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">辅导介绍</span>
         </ReactScrollLink>
       </motion.div>
       <motion.div

@@ -50,7 +50,7 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
           opacity: { delay: props.finishedLoading ? 0 : 2.7 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
           y: { delay: props.finishedLoading ? 0 : 2.7 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
-        className="text-gray-400 font-Header text-sm md:text-lg sm:text-md mt-10 tracking-wider"
+        className="text-gray-400 font-Header text-md md:text-lg sm:text-md mt-10 tracking-wider"
       >
         <div>
         我去年来参加精兵营一开始是抱着“好累哦不想来”的心态 —— 要不是我的好朋友Henson逼我来，我周末就会在家耍废废。

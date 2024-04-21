@@ -18,7 +18,7 @@ export default function AboutMe(props) {
             <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"} />
             <span className="text-AAsecondary font-Header text-sm  sm:text-xl"> 02.</span>
             <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider text-lg sm:text-2xl pl-4">
-             隊輔自我介绍
+             隊輔介绍
             </span>
           </div>
           <div className="bg-gray-400 h-[0.2px] w-full sm:w-72 ml-4"></div>
