@@ -18,7 +18,7 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
         }}
         className="text-AAsecondary font-mono"
       >
-        哈啰，欢迎来到精兵营的
+        Hi, my name is 
       </motion.span>
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
@@ -29,7 +29,7 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
         }}
         className="text-gray-300 font-bold text-3xl lg:text-7xl sm:text-5xl md:text-6xl mt-4"
       >
-        第4小队！
+        Angus Lee
       </motion.h1>
       <motion.h2
         initial={{ y: 10, opacity: 0 }}
@@ -40,7 +40,7 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
         }}
         className="text-gray-400 font-bold text-3xl lg:text-7xl sm:text-5xl md:text-6xl mt-4"
       >
-        来自Angus的爱心小叮咛🫶
+        I solve problems :)
       </motion.h2>
 
       <motion.h3
@@ -50,17 +50,12 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
           opacity: { delay: props.finishedLoading ? 0 : 2.7 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
           y: { delay: props.finishedLoading ? 0 : 2.7 + props.delta, duration: props.finishedLoading ? 0 : 0.2 },
         }}
-        className="text-gray-400 font-Header text-md md:text-lg sm:text-md mt-10 tracking-wider"
+        className="text-gray-400 font-Header text-md md:text-lg sm:text-md mt-10 tracking-wider w-3/4"
       >
         <div>
-        我去年来参加精兵营一开始是抱着“好累哦不想来”的心态 —— 要不是我的好朋友Henson逼我来，我周末就会在家耍废废。
-        但后来发现其实是一个蛮有收获的经验。
-        除了紧凑的课程外，还可以跟一群不认识的年轻基督徒们bound，甚至是在Queens活水团期的敬拜中嚎啕大哭（他们超棒超有恩膏的）。
-        </div>
-          <br></br>
-        <div>
-        总之呢！除了课程之外，鼓励大家多多认识人，听听看他们平常团期里都做什么，以及他们把时间都花在什么事上。
-        这样就可以了解他们以及他们所属的团契，除了多了一个好朋友之外或许能给你团期带来什么启发哦～
+          I'm a software developer skilled in building solutions and improving software codebases. <br/>
+          Currently I'm on a 5 month hiatus for mandatory military service @ Taiwan. 
+          Before that, I was focusing on developing <span className="text-AAsecondary">web applications</span> and visual dashboards for IBM.
         </div>
         
         
@@ -83,9 +78,9 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
         }}
         className="mt-12"
       >
-        <a href={"/timetable.pdf"} target={"_blank"} rel="noreferrer">
+        <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
           <button className="bg-AAprimary text-AAsecondary border rounded px-4 sm:px-8 py-3 sm:py-4 border-AAsecondary">
-            点击我查看行程表：）
+            Check out my Resume!
           </button>
         </a>
       </motion.div>

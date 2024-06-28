@@ -31,12 +31,12 @@ export default function SocialMediaEmail(props: { finishedLoading: boolean, delt
       >
         <div className="flex flex-col space-y-8 justify-center items-center">
           <div className="flex flex-col justify-center items-center space-y-5">
-            {/* Github Icon */}
-            <IconClickableWithAnimation Icon={GithubIcon} href={"https://github.com/drunkint"} />
             {/* Linkedin icon */}
             <IconClickableWithAnimation Icon={LinkedinIcon} href={"https://www.linkedin.com/in/angusleehs/"} />
+            {/* Github Icon */}
+            <IconClickableWithAnimation Icon={GithubIcon} href={"https://github.com/drunkint"} />
             {/* Instagram Icon */}
-            <IconClickableWithAnimation Icon={InstagramIcon} href={"https://www.instagram.com/anguslee__/"} />
+            <IconClickableWithAnimation Icon={InstagramIcon} href={"https://www.instagram.com/angus_writes_stuff/"} />
             {/* Youtube Icon */}
             {/* <IconClickableWithAnimation Icon={YoutubeIcon} href={"https://www.youtube.com/@abdellatif_anaflous"} /> */}
           </div>

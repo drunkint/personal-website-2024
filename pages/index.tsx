@@ -37,10 +37,9 @@ export default function Home() {
     }, 800);
   }, []);
 
-  console.log("website is rendering...");
   const meta = {
-    title: "精兵营第四組！",
-    description: `安格斯的小叮嚀`,
+    title: "Angus Lee",
+    description: `Angus Lee's Personal Website`,
     image: "/img/thumbnail.png",
     type: "website",
   };
@@ -55,7 +54,7 @@ export default function Home() {
         <meta property="og:url" content={`https://cb-team4.vercel.app/`} />
         <link rel="canonical" href={`https://cb-team4.vercel.app/`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="精兵营第四组" />
+        <meta property="og:site_name" content="Angus Lee" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
@@ -68,9 +67,9 @@ export default function Home() {
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} delta={delta} />
           <MyName finishedLoading={context.sharedState.finishedLoading} delta={delta} />
-          {/* <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} delta={delta} /> */}
+          <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} delta={delta} />
           {ShowElement ? <AboutMe ref={aboutRef} /> : <></>}
-          {ShowElement ? <AboutGrace ref={aboutRef} /> : <></>}
+          {/* {ShowElement ? <AboutGrace ref={aboutRef} /> : <></>} */}
           {ShowElement ? <WhereIHaveWorked /> : <></>}
           {ShowElement ? <SomethingIveBuilt /> : <></>}
           {/* {ShowElement ? <GetInTouch /> : <></>} */}
