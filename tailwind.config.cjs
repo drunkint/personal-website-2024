@@ -21,13 +21,13 @@ module.exports = {
         Arimo: ["Arimo", "sans-serif"],
       },
       colors: {
-        AAprimary: "#0b192f",
-        AAsecondary: "#64ffda",
+        AAprimary: "#2E3440",
+        AAsecondary: "#EBCB8B",
         AAError: "#ff6489",
-        AAtertiary: "#112340",
+        AAtertiary: "#BF616A",
         ResumeButtonHover: "#153040",
-        MobileNavBarColor: "#112340",
-        StartupBackground: "#020c1b",
+        MobileNavBarColor: "#5E81AC",
+        StartupBackground: "#2E3440",
       },
       screens: {
         sm: "640px",
