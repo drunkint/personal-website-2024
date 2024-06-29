@@ -8,12 +8,15 @@ import AdvancedAgroManagement from "./Descriptions/AdvancedAgroManagement";
 import Fantasia from "./Descriptions/Fantasia";
 import SuperBerry from "./Descriptions/SuperBerry";
 import ToBring from "./Descriptions/ToBring";
+import IBM from "./Descriptions/IBM";
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
+      case 'IBM':
+        return <IBM />
       case "BeforeYouCome":
         return <BeforeYouCome />;
       case "ToBring":
@@ -30,7 +33,7 @@ export default function WhereIHaveWorked() {
         return <SuperBerry />;
     }
   };
-  const [DescriptionJob, setDescriptionJob] = React.useState("BeforeYouCome");
+  const [DescriptionJob, setDescriptionJob] = React.useState("IBM");
   return (
     <div data-aos="fade-up" className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary">
       {/* // ? Title "Where I've Worked" */}
@@ -40,7 +43,7 @@ export default function WhereIHaveWorked() {
           <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 03.</span>
         </div>
         <span className="text-gray-200 opacity-85 font-bold tracking-wider text-lg md:text-2xl px-3">
-          Angus正式的爱心小叮咛从这边开始lol
+          Where I've Worked
         </span>
         {/* <span className="text-gray-400 opacity-85 font-bold tracking-wider text-lg md:text-2xl">
           （手机请向左滑标题）
@@ -122,10 +125,10 @@ const CompaniesBar = props => {
         <div className="flex flex-row md:flex-col">
         <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={0}
-            CompanyName="Before You Come"
+            CompanyName="IBM"
             BarPosition={-12}
             BarAvobePosition={1}
-            DescriptionJob="BeforeYouCome"
+            DescriptionJob="IBM"
             // CompanyNameBackgroundColorGreen={[true,false, false, false, false, false]}
             CompanyNameBackgroundColorGreen={[true,false, false]}
             setDescriptionJob={props.setDescriptionJob}
