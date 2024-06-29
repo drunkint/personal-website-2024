@@ -3,8 +3,8 @@ import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const angusInterests = [
-    ["1点前睡觉（没有一次成功）", "听谐音笑话", "自己煮饭"],
-    ["听音乐（日/独立）", "抱石", "看小宝宝短视频&动漫"],
+    ['React.js', 'Node.js', 'TypeScript', 'DB2 (SQL)', 'Carbon Design System'],
+    ['Next.js', 'Framer Motion', 'Express.js', 'Python', 'MongoDB'],
   ];
   const angusInterestsCombined = angusInterests.flat(1);
   return (
@@ -19,30 +19,32 @@ export default function AboutMe(props) {
             <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"} />
             <span className="text-AAsecondary font-Header text-sm  sm:text-xl"> 01.</span>
             <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider text-lg sm:text-2xl pl-4">
-             小组长介绍
+             About Me
             </span>
           </div>
-          <div className="bg-gray-400 h-[0.2px] w-full sm:w-72 ml-4"></div>
+          <div className="bg-gray-300 h-[0.2px] w-full sm:w-72 ml-4"></div>
         </div>
         {/* // ? Paragraphs */}
 
         <div className="w-full flex flex-col md:flex-row space-y-8 md:space-y-0  md:space-x-8 sm:space-x-2 ">
-          <div className="w-full md:w-7/12 space-y-4 sm:text-md text-lg ">
+          <div className="w-full md:w-7/12 space-y-4 sm:text-md text-md ">
             <div className="font-Header ">
-              <span className="text-gray-400 ">
-                哈啰我是你们的小队长Angus！
+              <span className="text-gray-300 tracking-wider">
+                Welcome to my corner of the web! 
               </span>
             </div>
             <div className="font-Header ">
-              <span className="text-gray-400 ">
-                我來自UTSC MCF，目前读大五CS，正在因为Coop而持续延毕中🫠
-                {/* Since pursuing my engineering degree, my career has taken me through diverse industries, allowing me to
-                refine my expertise in desktop and web development. In the realm of{" "}
-                <span className="text-AAsecondary">web3</span>, I am dedicated to pushing boundaries and driving
-                advancements. With experience working alongside esteemed organizations like{" "}
-                <span className="text-AAsecondary">ENS Vision</span>, where I played a key role in releasing v2 of{" "}
-                <span className="text-AAsecondary">ENS Vision Marketplace</span> , my passion for web3 and continuous
-                learning drives me to make a positive impact and advance technology. */}
+              <span className="text-gray-300 tracking-wider">
+              I'm Angus Lee, a passionate full-stack developer with a knack for turning complex challenges into elegant solutions. 
+              <br/><br/>
+              I honed my skills at the University of Toronto, where I achieved a 3.68 GPA and consistently made the Dean’s List. 
+              My journey includes impactful projects at IBM and Taq Automotive Intelligence, where I developed and maintained software solutions that manage large-scale operations and ensure efficiency.
+              <br/><br/>
+              Beyond professional projects, I’ve created fun personal projects such as building a ML modal that imitates Chinese Calligraphy written by Zhi Yong （智永）, and creating a 2D scrolling game using assembly.
+              As a Teaching Assistant, I also enjoy guiding students through the details of calculus and discrete math.
+              <br/><br/>
+              Explore my site, check out my projects, and see the digital magic I bring to life. 
+              Let's connect and create something extraordinary together!
               </span>
             </div>
             {/* <div className="font-Header tracking-wide">
@@ -59,55 +61,36 @@ export default function AboutMe(props) {
             </div> */}
 
             <div className="font-Header tracking-wide">
-              <span className="text-gray-400  ">
-                以下是一些我引以为傲的兴趣：
+              <span className="text-gray-300 tracking-wider">
+                Here is a list of technologies I'm currently working with:
               </span>
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
               <div className="flex flex-row space-x-2 items-center">
-                <div className="flex flex-col space-y-4 sm:text-base text-lg">
+                <div className="flex flex-col space-y-4 sm:text-base text-sm">
                   {angusInterests[0].map((tech, index) => {
                     return (
                       <div key={index} className="flex flex-row items-center space-x-2">
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-md text-md">{tech}</span>
+                        <span className="text-gray-300 sm:text-md text-md tracking-wider">{tech}</span>
                       </div>
                     );
                   })}
                 </div>
               </div>
               <div className="flex flex-row space-x-2 items-center">
-                <div className="flex flex-col space-y-4 sm:text-base text-lg">
+                <div className="flex flex-col space-y-4 sm:text-base text-sm">
                   {angusInterests[1].map((tech, index) => {
                     return (
                       <div key={index} className="flex flex-row items-center space-x-2">
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-md text-md">{tech}</span>
+                        <span className="text-gray-300 sm:text-md text-md tracking-wider">{tech}</span>
                       </div>
                     );
                   })}
                 </div>
               </div>
             </div>
-            <div className="font-Header ">
-              <span className="text-gray-400 ">
-                很开心能认识大家，期待我们可以一起在这次的营队中很有得着！٩(^ᗜ^ )و ´-
-              </span>
-            </div>
-            {/* Moved to beginning */}
-            {/* <div className="font-Header ">
-              <span className="text-gray-400 ">
-                我去年来参加精兵营一开始是抱着“好累哦不想来”的心态 —— 要不是我的好朋友Henson逼我来，我周末就会在家耍废废。
-                但后来发现其实是一个蛮有收获的经验。
-                除了紧凑的课程外，还可以跟一群不认识的年轻基督徒们bound，甚至是在Queens活水团期的敬拜中嚎啕大哭（他们超棒超有恩膏的）。
-              </span>
-            </div>
-            <div className="font-Header ">
-              <span className="text-gray-400 ">
-                总之呢！除了课程之外，鼓励大家多多认识人，听听看他们平常团期里都做什么，以及他们把时间都花在什么事上。
-                这样就可以了解他们以及他们所属的团契，除了多了一个好朋友之外或许能给你团期带来什么启发哦～
-              </span>
-            </div> */}
           </div>
           {/* // ? Image in Desktop and Tablet */}
           <div className="group relative lg:w-96 lg:h-96 md:w-72 md:h-72 md:block hidden ">
