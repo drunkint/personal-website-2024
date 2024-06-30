@@ -21,7 +21,7 @@ export default function SomethingIveBuilt() {
           <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 04.</span>
           <span className=" font-bold tracking-wider text-gray-200 text-lg md:text-2xl w-44 md:w-56 opacity-85">
             {" "}
-            其他资料
+            Stuff I've Built (Side Projects)
           </span>
         </div>
         <div className="bg-gray-400 h-[0.2px] w-full xl:w-1/3 md:w-1/2"></div>
@@ -44,15 +44,14 @@ export default function SomethingIveBuilt() {
                 ></div>
               </Link> */}
 
-              <a href="https://ontariochristiancamp.ca/" target={"_blank"} rel="noreferrer">
+              <a href="https://github.com/drunkint/Pix2Pix-Calligraphy" target={"_blank"} rel="noreferrer">
                 <div
                   // onClick={}
                   className="absolute w-full h-full rounded bg-AAprimary 
            transition-opacity opacity-30 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
-
-              <Img src={"/forest.jpeg"} alt={"Picture of Place"} className={`w-full rounded h-full `} />
+              <Img src={"/img/calligraphy.png"} alt={"a table showing the input, ground truth, and output of our ML cGAN Model"} className={`w-full rounded h-full `} />
             </div>
           </div>
 
@@ -63,7 +62,7 @@ export default function SomethingIveBuilt() {
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                <Img src={"/forest.jpeg"} alt={"Picture of place"} className={`w-full h-full `} />
+                {/* <Img src={"/typing.png"} alt={"Project Screen shot"} className={`w-full h-full `} /> */}
               </div>
             </div>
 
@@ -72,39 +71,37 @@ export default function SomethingIveBuilt() {
             col-span-8 flex flex-col items-start md:items-end space-y-3"
             >
               <div className="flex flex-col space-y-1 md:items-end z-10">
-                <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl">我们的宿舍～</span>
-                <div className="flex flex-row">
-                </div>
+                <span className="text-AAsecondary text-base">ML Project</span>
+                <Link href={"https://github.com/drunkint/Pix2Pix-Calligraphy"} target="_blank" rel="noopener noreferrer">
+                  <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
+                  Chinese Calligraphy Synthesis
+                  </span>
+                </Link>
               </div>
-              <div className="flex flex-col w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
-                <div className="flex flex-row">
-                  <ArrowIcon className={" h-7 w-6 text-AAsecondary flex-none"} />
-                  <span className="text-gray-200 text-xl">
-                    男生宿舍 Link：
-                    </span>
-                  <a href="https://ontariochristiancamp.ca/rentals/facilities/drost-lodge/" target="_blank" rel="noopener noreferrer">
-                    <span className="text-AAsecondary text-xl hover:cursor-pointer">
-                    Drost Lodge
-                    </span>
-                  </a>
-                </div>
-                <div className="flex flex-row">
-                  <ArrowIcon className={" h-7 w-6 text-AAsecondary flex-none"} />
-                  <span className="text-gray-200 text-xl">
-                    女生宿舍 Link： 
-                    </span>
-                  <a href="https://ontariochristiancamp.ca/rentals/facilities/centre-hall/" target="_blank" rel="noopener noreferrer">
-                    <span className="text-AAsecondary text-xl hover:cursor-pointer">
-                    Centre Hall
-                    </span>
-                  </a>
-                </div>
-                
+              <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
+                <p className="text-gray-300 md:text-gray-400 text-left md:text-right">
+                  This projects aims to <span className="text-AAsecondary">imitate the calligraphy style of Zhi Yong (智永) </span> based on text input.
+                  We used two variants of <span className="text-AAsecondary">cGAN</span> (Conditional Generative Adversarial Network), one with UNet, another with the basic Encoder-Decoder Model.
+                  Surprisingly, we found out that in this case, the cGAN model that used the encoder-decoder model performed better.
+                </p>
+              </div>
+              <ul
+                className="flex flex-wrap w-full text-gray-300 md:text-gray-400
+               text-sm font-Text2 md:justify-end"
+              >
+                <span className="pr-4 z-10">Machine Learning</span>
+                <span className="pr-4 z-10">Pix2pix</span>
+                <span className="pr-4 z-10">PyTorch</span>
+                <span className="pr-4 z-10">Numpy</span>
+                <span className="pr-4 z-10">MatPlotLib</span>
+              </ul>
+              <div className="z-10 flex fle-row space-x-5 ">
+                <GithubIcon link="https://github.com/drunkint/Pix2Pix-Calligraphy" />
+                <ExternalLink url={"https://github.com/drunkint/Pix2Pix-Calligraphy/blob/main/cGAN%20in%20Chinese%20Calligraphy%20Synthesis.pdf"} router={router} />
               </div>
             </div>
           </div>
         </div>
-<div className="hidden">
         {/* // ?  Project 2 */}
         <div data-aos="fade-up" className="relative md:grid md:grid-cols-12 w-full md:h-96  ">
           {/* Left image */}
@@ -113,13 +110,13 @@ export default function SomethingIveBuilt() {
           absolute md:grid grid-cols-12 w-full h-full  content-center "
           >
             <div className="relative rounded w-full h-full col-start-6 col-span-7 ">
-              <a href={"https://ubiquitous-bublanina-da84ec.netlify.app/"} target="_blank" rel="noreferrer">
+              <a href={"https://github.com/UTSCCSCC01/projectf21-gmt-8-gang"} target="_blank" rel="noreferrer">
                 <div
                   className="absolute w-full h-full rounded bg-AAprimary 
            transition-opacity opacity-50 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
-              {/* <Img src={"/img/YPredict-v1.jpg"} alt={"Project Screen shot"} className={`w-full rounded h-full `} /> */}
+              <Img src={"/img/being-seen3.png"} alt={"Project Screen shot"} className={`w-full rounded h-full `} />
             </div>
           </div>
 
@@ -139,42 +136,40 @@ export default function SomethingIveBuilt() {
             col-span-8 flex flex-col items-start  space-y-3 md:order-1"
             >
               <div className="flex flex-col space-y-1  z-10">
-                <span className="text-AAsecondary text-base">Recent Project</span>
-                <a href="https://ypredict.ai/" target="_blank" rel="noopener noreferrer">
+                <span className="text-AAsecondary text-base">Android App</span>
+                <a href="https://github.com/UTSCCSCC01/projectf21-gmt-8-gang" target="_blank" rel="noopener noreferrer">
                   <span className=" md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
-                    YPredict - v1
+                    Being Seen - An app for the homeless youth
                   </span>
                 </a>
               </div>
               <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6  z-10">
                 <p className="text-gray-300 md:text-gray-400 text-left ">
-                  I had the opportunity to lead the development of a token project, which aimed to create a
-                  decentralized ecosystem for peer-to-peer transactions. Overseeing the planning and development of the
-                  project, including the <span className="text-AAsecondary"> design</span> and implementation of the{" "}
-                  <span className="text-AAsecondary"> smart contract</span> and{" "}
-                  <span className="text-AAsecondary"> blockchain technology</span>. Here i share with you{" "}
-                  <span className="text-AAsecondary"> YPredict - v1 </span> for the private sale.
+                I was recognized as the <span className="text-AAsecondary">#1 contributor</span> to the Being Seen App, a mobile application designed to support homeless youth. 
+                I focused on developing features like <span className="text-AAsecondary">JWT token validation, online payments with StripeAPI</span>
+                , and impactful features such as RBAC (Role based access control), creating conversion requests, setting up donation goals, and animations.
                 </p>
               </div>
               <ul
                 className="flex flex-wrap w-full text-gray-300 md:text-gray-400
                text-sm font-Text2 md:justify-start"
               >
-                <span className="pr-4 z-10">Token</span>
-                <span className="pr-4 z-10">ERC20</span>
-                <span className="pr-4 z-10">Nextjs</span>
-                <span className="pr-4 z-10">Smart contract</span>
-                <span className="pr-4 z-10">Blockchain</span>
+                <span className="pr-4 z-10">Android Studio</span>
+                <span className="pr-4 z-10">Spring Boot</span>
+                <span className="pr-4 z-10">MongoDB</span>
+                <span className="pr-4 z-10">StripeAPI</span>
+                <span className="pr-4 z-10">LottieFiles</span>
               </ul>
               <div className="z-10 flex fle-row space-x-5 ">
-                <GithubIcon link="https://github.com/hktitof/Ypredict" />
-                <a href="https://ubiquitous-bublanina-da84ec.netlify.app/" target={"_blank"} rel="noreferrer">
+                <GithubIcon link="https://github.com/UTSCCSCC01/projectf21-gmt-8-gang" />
+                {/* <a href="https://ubiquitous-bublanina-da84ec.netlify.app/" target={"_blank"} rel="noreferrer">
                   <ExternalLink url={""} router={router} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
         </div>
+<div className="hidden">
         {/* // ?  Project  3*/}
         <div data-aos="fade-up" className="relative md:grid md:grid-cols-12 w-full md:h-96 ">
           {/* Left image */}
