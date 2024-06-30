@@ -21,8 +21,8 @@ export default function IBM() {
         keywords: ['Led', 'four dashboards'],
     },
     {
-        text: "Trained co-workers through online sessions and creating documents to enhance their skills in dashboard development and facilitate effective knowledge transfer.",
-        keywords: ['Trained co-workers'],
+        text: "Led and trained co-workers to work on dashboard development via designing and arranging online sessions, creating recorded tutorials, and writing documents.",
+        keywords: ['Led and trained co-workers'],
     },
     {
         text: "Assisted two business units to migrate to the HR application by creating multiple typescript scripts to mass import data, modifying SQL views, and conducting UI and backend logic changes.",

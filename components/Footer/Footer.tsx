@@ -42,7 +42,7 @@ export default function Fotter(props: { githubUrl: string; hideSocialsInDesktop:
     text-sm  space-y-2  "
         >
           <span className="group-hover:text-AAsecondary sm:text-sm text-xs">
-            Modified by Angus Lee (Contributions are welcome!)
+            Modified by Angus Lee
           </span>
         </div>
       </a>

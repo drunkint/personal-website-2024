@@ -9,6 +9,8 @@ import Fantasia from "./Descriptions/Fantasia";
 import SuperBerry from "./Descriptions/SuperBerry";
 import ToBring from "./Descriptions/ToBring";
 import IBM from "./Descriptions/IBM";
+import Taq from "./Descriptions/Taq";
+import UofT from "./Descriptions/UofT";
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
@@ -16,7 +18,11 @@ export default function WhereIHaveWorked() {
   const GetDescription = () => {
     switch (DescriptionJob) {
       case 'IBM':
-        return <IBM />
+        return <IBM />;
+      case 'Taq':
+        return <Taq />;
+      case 'UofT':
+        return <UofT />
       case "BeforeYouCome":
         return <BeforeYouCome />;
       case "ToBring":
@@ -135,20 +141,20 @@ const CompaniesBar = props => {
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
-            CompanyName="What to Bring"
+            CompanyName="Taq"
             BarPosition={32}
             BarAvobePosition={129}
-            DescriptionJob="ToBring"
+            DescriptionJob="Taq"
             // CompanyNameBackgroundColorGreen={[false,true, false, false, false, false]}
             CompanyNameBackgroundColorGreen={[false,true, false,]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="We Don't Have"
+            CompanyName="Uni of Toronto"
             BarPosition={76}
             BarAvobePosition={257}
-            DescriptionJob="WeDontHave"
+            DescriptionJob="UofT"
             // CompanyNameBackgroundColorGreen={[false,false, true, false, false, false]}
             CompanyNameBackgroundColorGreen={[false,false, true,]}
             setDescriptionJob={props.setDescriptionJob}
