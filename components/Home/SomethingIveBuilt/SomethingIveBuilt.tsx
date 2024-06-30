@@ -10,7 +10,7 @@ export default function SomethingIveBuilt() {
   const router = useRouter();
   return (
     <div
-      id="otherInfoSection"
+      id="projectsSection"
       className=" flex flex-col xl:space-y-28 space-y-12 bg-AAprimary w-full  
      2xl:px-72 lg:px-24 md:px-16 sm:px-16 py-32 px-4"
     >
@@ -62,7 +62,7 @@ export default function SomethingIveBuilt() {
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                {/* <Img src={"/typing.png"} alt={"Project Screen shot"} className={`w-full h-full `} /> */}
+                <Img src={"/img/calligraphy.png"} alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} className={`w-full h-full object-cover`} />
               </div>
             </div>
 
@@ -127,7 +127,7 @@ export default function SomethingIveBuilt() {
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
                 <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                {/* <Img src={"/hackme.jpg"} alt={"Project Screen shot"} className={`w-full h-full`} /> */}
+                <Img src={"/img/being-seen3.png"} alt={"Being Seen app created for the homeless yourth, created by Angus Lee 李旭紳 using Android Studio"} className={`w-full h-full object-cover`} />
               </div>
             </div>
 

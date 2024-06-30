@@ -56,7 +56,7 @@ const MobileMenu = props => {
             </span>
           </Link>
           <Link
-            to="remindersSection"
+            to="projectsSection"
             spy={true}
             smooth={true}
             offset={100}
@@ -73,7 +73,7 @@ const MobileMenu = props => {
             </span>
           </Link>
           <Link
-            to="otherInfoSection"
+            to="GetInTouchSection"
             spy={true}
             smooth={true}
             offset={100}
@@ -89,12 +89,12 @@ const MobileMenu = props => {
               Contact
             </span>
           </Link>
-          <a href={"/timetable.pdf"} target={"_blank"} rel="noreferrer">
+          <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
             <button
               className="rounded border font-Text2  border-AAsecondary
            hover:bg-ResumeButtonHover py-2 sm:py-4 px-5 sm:px-10 text-xs text-AAsecondary"
             >
-              Timetable
+              Resume
             </button>
           </a>
         </div>

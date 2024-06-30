@@ -29,7 +29,7 @@ export default function UofT() {
         },
         {
             text: "Held Tutorials and Office Hours for 30 students every week, explained problems with clarity and patience, graded exams in courses with more than 550 students, and created weekly/biweekly quizzes that were written by 450 students.",
-            keywords: ["Held Tutorials", "created weekly/biweekly quizzes", "450 students   "],
+            keywords: ["Held Tutorials", "created weekly/biweekly quizzes", "450 students"],
         },
         {
             text: "Conducted effective communication among the professor and TAs to coordinate teaching material and scheduling.",

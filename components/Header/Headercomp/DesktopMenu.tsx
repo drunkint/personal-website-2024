@@ -64,7 +64,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean, delta }) 
         }}
         className="text-AAsecondary"
       >
-        <ReactScrollLink to="remindersSection" spy={true} smooth={true} offset={-100} duration={200}>
+        <ReactScrollLink to="projectsSection" spy={true} smooth={true} offset={-100} duration={200}>
         &gt; 03. <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">Projects</span>
 
         </ReactScrollLink>
@@ -86,7 +86,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean, delta }) 
         }}
         className="text-AAsecondary"
       >
-        <ReactScrollLink to="otherInfoSection" spy={true} smooth={true} offset={-100} duration={200}>
+        <ReactScrollLink to="GetInTouchSection" spy={true} smooth={true} offset={-100} duration={200}>
          &gt; 04. <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">Contact</span>
         </ReactScrollLink>
       </motion.span>
