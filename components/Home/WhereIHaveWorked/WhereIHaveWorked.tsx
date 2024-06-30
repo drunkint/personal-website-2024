@@ -46,7 +46,7 @@ export default function WhereIHaveWorked() {
       <section className="flex flex-row items-center">
         <div className="flex flex-row items-center">
           <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 text-AAsecondary"} />
-          <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 03.</span>
+          <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 02.</span>
         </div>
         <span className="text-gray-200 opacity-85 font-bold tracking-wider text-lg md:text-2xl px-3">
           Where I've Worked
@@ -107,7 +107,7 @@ const CompaniesBar = props => {
 
   return (
     <div
-      id="remindersSection"
+      id="whereIHaveWorkedSection"
       className=" flex flex-col md:flex-row  w-screen lg:w-auto 
       overflow-auto scrollbar-hide md:overflow-hidden pb-4 md:pb-0 justify-start
        sm:justify-center items-start sm:items-center"

@@ -95,7 +95,7 @@ export default function UofT() {
                     <span className="text-gray-100 sm:text-lg text-md font-Arimo tracking-wide">
                         Teaching Assistant{" "}
                         <span className="text-AAsecondary">
-                            @ The University of Toronto
+                            @ University of Toronto
                         </span>
                     </span>
                     {/* Date */}

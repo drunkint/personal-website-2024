@@ -37,7 +37,7 @@ export default function AboutMe(props) {
               <span className="text-gray-300 tracking-wider">
               I'm Angus Lee, a passionate full-stack developer with a knack for turning complex challenges into elegant solutions. 
               <br/><br/>
-              I honed my skills at the University of Toronto, where I achieved a 3.68 GPA and consistently made the Dean’s List. 
+              I honed my skills at the <span className="text-AAsecondary">University of Toronto</span>, where I achieved a <span className="text-AAsecondary">3.68 GPA</span> and consistently made the <span className="text-AAsecondary">Dean’s List</span>. 
               My journey includes impactful projects at IBM and Taq Automotive Intelligence, where I developed and maintained software solutions that manage large-scale operations and ensure efficiency.
               <br/><br/>
               Beyond professional projects, I’ve created fun personal projects such as building a ML modal that imitates Chinese Calligraphy written by Zhi Yong （智永）, and creating a 2D scrolling game using assembly.

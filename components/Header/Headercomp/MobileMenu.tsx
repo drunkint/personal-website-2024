@@ -35,11 +35,11 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              小组长介绍
+              About Me
             </span>
           </Link>
           <Link
-            to="aboutGraceSection"
+            to="whereIHaveWorkedSection"
             spy={true}
             smooth={true}
             offset={-250}
@@ -52,7 +52,7 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              辅导介绍
+              Experience
             </span>
           </Link>
           <Link
@@ -69,7 +69,7 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              Angus小叮咛
+              Projects
             </span>
           </Link>
           <Link
@@ -86,7 +86,7 @@ const MobileMenu = props => {
               className="text-white font-Text2 text-sm sm:text-base
              hover:text-AAsecondary hover:cursor-pointer duration-300"
             >
-              其他资料
+              Contact
             </span>
           </Link>
           <a href={"/timetable.pdf"} target={"_blank"} rel="noreferrer">

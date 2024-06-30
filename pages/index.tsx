@@ -72,7 +72,7 @@ export default function Home() {
           {/* {ShowElement ? <AboutGrace ref={aboutRef} /> : <></>} */}
           {ShowElement ? <WhereIHaveWorked /> : <></>}
           {ShowElement ? <SomethingIveBuilt /> : <></>}
-          {/* {ShowElement ? <GetInTouch /> : <></>} */}
+          {ShowElement ? <GetInTouch /> : <></>}
           {ShowElement ? <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} />: <></>}
           {!isProd && <ScreenSizeDetector />}
         </div>
