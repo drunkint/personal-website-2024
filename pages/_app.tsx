@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import AppContext from "../components/AppContextFolder/AppContext";
 import { useRef, useState } from "react";
 
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }) {
     <AppContext.Provider value={{ sharedState, setSharedState }}>
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </AppContext.Provider>
   );
 }
