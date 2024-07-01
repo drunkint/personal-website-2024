@@ -49,7 +49,7 @@ export default function WhereIHaveWorked() {
           <span className="text-AAsecondary font-sans text-sm  sm:text-xl"> 02.</span>
         </div>
         <span className="text-gray-200 opacity-85 font-bold tracking-wider text-lg md:text-2xl px-3">
-          Where I've Worked
+          Where I&apos;ve Worked
         </span>
         {/* <span className="text-gray-400 opacity-85 font-bold tracking-wider text-lg md:text-2xl">
           （手机请向左滑标题）

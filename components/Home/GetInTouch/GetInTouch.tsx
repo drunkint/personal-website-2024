@@ -18,10 +18,10 @@ export default function GetInTouch() {
       {/* // ? Get In Touch */}
       <span className="text-gray-200 text-3xl sm:text-4xl font-bold tracking-wider opacity-85">Get In Touch</span>
       <p className="flex font-Header tracking-wider text-gray-400 text-center px-6 sm:px-16 md:px-0 md:w-[600px]">
-        I'd love to hear from you! 
+        I&apos;d love to hear from you! 
         Whether you have a project in mind, a question, or just want to connect, feel free to reach out. 
         You can contact me via email, follow me on LinkedIn, or check out my latest work on GitHub. <br/> <br/>
-        Let's team up and work on stuff!      
+        Let&apos;s team up and work on stuff!      
       </p>
       <div className="pt-4">
         <a href="mailto:hsushen.lee@mail.utoronto.ca" target={"_blank"} rel="noreferrer">

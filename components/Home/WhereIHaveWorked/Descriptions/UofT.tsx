@@ -61,7 +61,7 @@ export default function UofT() {
 
     function semiBulletPoint(index: number, item: {text: string, keywords: string[]}): React.JSX.Element {
         return (<div
-            key={index}
+            key={`0-${index}`}
             className="flex flex-row space-x-2"
         >
             <ArrowIcon
@@ -108,7 +108,7 @@ export default function UofT() {
                     {tasks.map((item, index) => {
                         if (index === 0) {
                             return (
-                                <div>
+                                <div key={'first'}>
                                     {normalBulletPoint(index, item)}
                                     {semiBulletPoints()}
                                 </div>);

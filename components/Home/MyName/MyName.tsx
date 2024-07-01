@@ -53,8 +53,8 @@ export default function MyName(props: { finishedLoading: boolean, delta }) {
         className="text-gray-400 font-Header text-md md:text-lg sm:text-md mt-10 tracking-wider w-3/4"
       >
         <div>
-          I'm a software developer skilled in building solutions and improving software codebases. <br/>
-          Currently I'm on a 5 month hiatus for mandatory military service @ Taiwan. 
+          I&apos;m a software developer skilled in building solutions and improving software codebases. <br/>
+          Currently I&apos;m on a 5 month hiatus for mandatory military service @ Taiwan. 
           Before that, I was focusing on developing <span className="text-AAsecondary">web applications</span> and visual dashboards for IBM.
         </div>
         

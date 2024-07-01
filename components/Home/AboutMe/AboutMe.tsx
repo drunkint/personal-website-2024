@@ -35,7 +35,7 @@ export default function AboutMe(props) {
             </div>
             <div className="font-Header ">
               <span className="text-gray-300 tracking-wider">
-              I'm Angus Lee, a passionate full-stack developer with a knack for turning complex challenges into elegant solutions. 
+              I&apos;m Angus Lee, a passionate full-stack developer with a knack for turning complex challenges into elegant solutions. 
               <br/><br/>
               I honed my skills at the <span className="text-AAsecondary">University of Toronto</span>, where I achieved a <span className="text-AAsecondary">3.68 GPA</span> and consistently made the <span className="text-AAsecondary">Dean’s List</span>. 
               My journey includes impactful projects at IBM and Taq Automotive Intelligence, where I developed and maintained software solutions that manage large-scale operations and ensure efficiency.
@@ -44,7 +44,7 @@ export default function AboutMe(props) {
               As a Teaching Assistant, I also enjoy guiding students through the details of calculus and discrete math.
               <br/><br/>
               Explore my site, check out my projects, and see the digital magic I bring to life. 
-              Let's connect and create something extraordinary together!
+              Let&apos;s connect and create something extraordinary together!
               </span>
             </div>
             {/* <div className="font-Header tracking-wide">
@@ -62,7 +62,7 @@ export default function AboutMe(props) {
 
             <div className="font-Header tracking-wide">
               <span className="text-gray-300 tracking-wider">
-                Here is a list of technologies I'm currently working with:
+                Here is a list of technologies I&apos;m currently working with:
               </span>
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
