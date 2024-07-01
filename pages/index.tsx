@@ -59,11 +59,11 @@ export default function Home() {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <link rel="icon" type="image/ico" sizes="16x16" href="https://www.angusleehs.me/favicon.ico"></link>
-        {/* <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@titofabdo" />
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:site" content="@titofabdo" /> */}
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} /> */}
+        <meta name="twitter:image" content={meta.image} />
       </Head>
         <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} delta={delta} />
