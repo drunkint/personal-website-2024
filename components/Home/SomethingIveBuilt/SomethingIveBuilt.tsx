@@ -51,18 +51,21 @@ export default function SomethingIveBuilt() {
            transition-opacity opacity-30 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
-              <Img src={"/img/calligraphy.png"} alt={"a table showing the input, ground truth, and output of our ML cGAN Model"} className={`w-full rounded h-full `} />
+              <Img src={"/img/calligraphy.png"} alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} className={`w-full rounded h-full `} />
             </div>
           </div>
 
           {/* right Content */}
           <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center ">
             {/* background for text in mobile responsive */}
-            <div className="absolute w-full h-full bg-opacity-70 z-0">
+            <div className=" w-full h-full z-0">
               <div className="relative w-full h-full">
-                <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
-                <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                <Img src={"/img/calligraphy.png"} alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} className={`w-full h-full object-cover`} />
+                {/* <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div> */}
+                {/* <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div> */}
+                <Img 
+                  src={"/img/calligraphy.png"} 
+                  alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} 
+                  className={`w-full h-full object-cover`} />
               </div>
             </div>
 
@@ -116,18 +119,23 @@ export default function SomethingIveBuilt() {
            transition-opacity opacity-50 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
-              <Img src={"/img/being-seen3.png"} alt={"Project Screen shot"} className={`w-full rounded h-full `} />
+              <Img 
+                src={"/img/being-seen3.png"} 
+                alt={"Being Seen app for the homeless youth, created by Angus Lee 李旭紳 using Android Studio"} 
+                className={`w-full rounded h-full `} />
             </div>
           </div>
 
           {/* right Content */}
           <div className=" md:absolute py-4  md:grid md:grid-cols-12 w-full h-full  content-center ">
             {/* background for text in mobile responsive */}
-            <div className="absolute w-full h-full bg-opacity-70 z-0 md:order-2">
+            <div className=" w-full h-full z-0 md:order-2">
               <div className="relative w-full h-full">
-                <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
-                <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                <Img src={"/img/being-seen3.png"} alt={"Being Seen app created for the homeless yourth, created by Angus Lee 李旭紳 using Android Studio"} className={`w-full h-full object-cover`} />
+                {/* <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div> */}
+                {/* <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div> */}
+                <Img 
+                  src={"/img/being-seen3.png"} 
+                  alt={"Being Seen app created for the homeless yourth, created by Angus Lee 李旭紳 using Android Studio"} className={`w-full h-full object-cover`} />
               </div>
             </div>
 
