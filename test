@@ -1,0 +1,3 @@
+{
+    "presets": ["next/babel"] // this file used to be .babelrc
+}
