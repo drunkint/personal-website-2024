@@ -39,7 +39,7 @@ export default function Home() {
 
   const meta = {
     title: "Angus Lee | 李旭紳 👉 I build digital solutions 💪",
-    description: `Hi, I'm Angus Lee (李旭紳). I'm a computer science student in the University of Toronto, currently interning as a full stack software developer at IBM.`,
+    description: `Hi, I'm Angus Lee / Hsu Shen Lee / 李旭紳. I'm a computer science student in the University of Toronto, currently interning as a full stack software developer at IBM.`,
     image: "/img/cover-page.jpg",
     type: "website",
   };
@@ -54,7 +54,7 @@ export default function Home() {
         <meta property="og:url" content={`https://www.angusleehs.me/`} />
         <link rel="canonical" href={`https://www.angusleehs.me/`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Angus Lee" />
+        <meta property="og:site_name" content="Angus Lee / Hsu Shen Lee / 李旭紳" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />

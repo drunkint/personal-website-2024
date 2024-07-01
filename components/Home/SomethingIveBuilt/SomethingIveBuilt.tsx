@@ -51,7 +51,7 @@ export default function SomethingIveBuilt() {
            transition-opacity opacity-30 hover:opacity-0 hover:cursor-pointer duration-300"
                 ></div>
               </a>
-              <Img src={"/img/calligraphy.png"} alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} className={`w-full rounded h-full `} />
+              <Img src={"/img/calligraphy.png"} alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee (Hsu Shen) 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} className={`w-full rounded h-full `} />
             </div>
           </div>
 
@@ -64,7 +64,7 @@ export default function SomethingIveBuilt() {
                 {/* <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div> */}
                 <Img 
                   src={"/img/calligraphy.png"} 
-                  alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} 
+                  alt={"Chinese Calligraphy Synthesis of Zhi Yong 智永, created by Angus Lee (Hsu Shen) 李旭紳 using the ML Model cGAN along with the Encoder-Decoder Model"} 
                   className={`w-full h-full object-cover`} />
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function SomethingIveBuilt() {
               </a>
               <Img 
                 src={"/img/being-seen3.png"} 
-                alt={"Being Seen app for the homeless youth, created by Angus Lee 李旭紳 using Android Studio"} 
+                alt={"Being Seen app for the homeless youth, created by Angus Lee (Hsu Shen) 李旭紳 using Android Studio"} 
                 className={`w-full rounded h-full `} />
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function SomethingIveBuilt() {
                 {/* <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div> */}
                 <Img 
                   src={"/img/being-seen3.png"} 
-                  alt={"Being Seen app created for the homeless yourth, created by Angus Lee 李旭紳 using Android Studio"} className={`w-full h-full object-cover`} />
+                  alt={"Being Seen app created for the homeless yourth, created by Angus Lee (Hsu Shen) 李旭紳 using Android Studio"} className={`w-full h-full object-cover`} />
               </div>
             </div>
 

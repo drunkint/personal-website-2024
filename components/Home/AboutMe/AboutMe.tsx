@@ -105,7 +105,7 @@ export default function AboutMe(props) {
               <Img
                 src={"/img/profile.jpeg"}
                 className={"object-contain rounded-lg"}
-                alt="An image of Angus Lee 李旭紳, a University of Toronto Computer Science Student interned in IBM."
+                alt="An image of Angus Lee (Hsu Shen) 李旭紳, a University of Toronto Computer Science Student interned in IBM."
               />
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function AboutMe(props) {
               <Img
                 src={"/img/profile.jpeg"}
                 className={"object-contain rounded-lg"}
-                alt="An image of Angus Lee 李旭紳, a University of Toronto Computer Science Student interned in IBM."
+                alt="An image of Angus Lee (Hsu Shen) 李旭紳, a University of Toronto Computer Science Student interned in IBM."
               />
             </div>
             <div className="absolute w-48 h-full  bg-AAsecondary opacity-10 md:opacity-60  rounded overflow-hidden"></div>
