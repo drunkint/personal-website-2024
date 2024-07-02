@@ -151,7 +151,7 @@ const CompaniesBar = props => {
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="Uni of Toronto"
+            CompanyName="U of Toronto"
             BarPosition={76}
             BarAvobePosition={257}
             DescriptionJob="UofT"

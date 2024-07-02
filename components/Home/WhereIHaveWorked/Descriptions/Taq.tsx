@@ -24,7 +24,7 @@ export default function Taq() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-md font-Arimo tracking-wide">
-            Software Developer <span className="text-AAsecondary">@ Taq Automotive Intelligence</span>
+            Software Developer <span className="text-AAsecondary">@ <a href="https://www.taqauto.com/" target={"_blank"} rel="noreferrer">Taq Automotive Intelligence</a></span>
           </span>
           {/* Date */}
           <span className="font-mono text-sm text-gray-400">May 2022 - December 2022</span>

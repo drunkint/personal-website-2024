@@ -95,7 +95,7 @@ export default function UofT() {
                     <span className="text-gray-100 sm:text-lg text-md font-Arimo tracking-wide">
                         Teaching Assistant{" "}
                         <span className="text-AAsecondary">
-                            @ University of Toronto
+                            @ <a href="https://www.utoronto.ca/" target={"_blank"} rel="noreferrer">University of Toronto</a>
                         </span>
                     </span>
                     {/* Date */}

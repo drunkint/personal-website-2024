@@ -35,7 +35,7 @@ export default function IBM() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-md font-Arimo tracking-wide">
-            Software Developer <span className="text-AAsecondary">@ IBM</span>
+            Software Developer <span className="text-AAsecondary">@ <a href="https://www.ibm.com/ca-en" target={"_blank"} rel="noreferrer">IBM</a></span>
           </span>
           {/* Date */}
           <span className="font-mono text-sm text-gray-400">May 2023 - July 2024</span>
