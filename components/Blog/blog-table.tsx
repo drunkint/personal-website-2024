@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation'
-import { useSearchParams } from 'next/navigation'
-
-
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const formatDate = (date: string) => {
   const dateString = new Date(date).toDateString();
@@ -40,12 +38,11 @@ const getAllTags = (allPosts) => {
 
 export default function BlogTable({ allPosts }) {
   const [postsToShow, setPostsToShow] = useState(allPosts);
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const router = useRouter();
 
-
   useEffect(() => {
-    const cachedSearchText: string = localStorage.getItem('searchText');
+    const cachedSearchText: string = localStorage.getItem("searchText");
     if (cachedSearchText != null) {
       setSearchText(cachedSearchText);
       filterPosts(cachedSearchText);
@@ -79,9 +76,17 @@ export default function BlogTable({ allPosts }) {
   };
 
   return (
-    <div className="flex flex-col max-w-3xl mx-auto font-Header text-gray-300 tracking-wider py-48">
+    <div className="flex flex-col max-w-3xl mx-auto font-Header text-gray-300 tracking-wider py-36">
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+          {/* Back Button  */}
+          <button
+            className="text-lg text-AAsecondary rounded-lg px-4 py-2 mb-16 hover:bg-AAtertiary "
+            type="button"
+            onClick={() => router.push('/')}
+          >
+            Back
+          </button>
           {/* dropdown */}
           {/* <div className="inline-block relative w-64">
             <select className="block appearance-none w-full bg-AAtertiary px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline">
@@ -103,7 +108,6 @@ export default function BlogTable({ allPosts }) {
             </div>
           </div> */}
           {/* Search Bar */}
-
           <form className="max-w-md mx-auto">
             {/* <label
               htmlFor="default-search"
@@ -139,7 +143,7 @@ export default function BlogTable({ allPosts }) {
                 onChange={(e) => {
                   filterPosts(e.target.value);
                   setSearchText(e.target.value);
-                  localStorage.setItem('searchText', e.target.value);
+                  localStorage.setItem("searchText", e.target.value);
                 }}
                 value={searchText}
               />
@@ -177,7 +181,7 @@ export default function BlogTable({ allPosts }) {
                       className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
                       key={post.title}
                       onClick={(e) => {
-                        localStorage.setItem('searchText', searchText);
+                        localStorage.setItem("searchText", searchText);
                         router.push(`/blog/${post.slug}`);
                         // router.refresh();
                       }}
@@ -185,16 +189,19 @@ export default function BlogTable({ allPosts }) {
                       <td className="whitespace-nowrap px-6 py-4 font-medium">
                         {formatDate(post.date)}
                       </td>
-                      
+
                       <td className="whitespace-nowrap px-6 py-4">
-                      {/* <Link href={`/blog/${post.slug}`}> */}
+                        {/* <Link href={`/blog/${post.slug}`}> */}
                         {post.title}
                         {/* </Link> */}
                       </td>
-                      
+
                       <td className="whitespace-nowrap px-6 py-4">
                         {post.tags.map((tag) => (
-                          <span key={tag} className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1">
+                          <span
+                            key={tag}
+                            className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1"
+                          >
                             <span
                               aria-hidden
                               className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "

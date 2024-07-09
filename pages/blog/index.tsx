@@ -28,6 +28,7 @@ export default function Posts({ allPosts }) {
         </title>
         <meta property="og:image" content='/img/cover-page.jpg' />
       </Head>
+
       <BlogTable allPosts={allPosts} />
 
       {/* <SocialMediaArround finishedLoading={true} />
