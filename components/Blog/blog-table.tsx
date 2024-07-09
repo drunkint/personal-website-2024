@@ -185,7 +185,7 @@ export default function BlogTable({ allPosts }) {
                 <ul role="list" className="block lg:hidden divide-y divide-AAtertiary px-10">
                   {postsToShow.map((post) => (
                     <li
-                      key={post.title}
+                      key={post.title + post.date}
                       className="flex justify-between gap-x-6 py-5"
                       
                     >
@@ -228,7 +228,7 @@ export default function BlogTable({ allPosts }) {
                     {postsToShow.map((post) => (
                       <tr
                         className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 "
-                        key={post.title}
+                        key={post.title + post.date}
                       >
                         <td 
                           className="whitespace-nowrap px-6 py-4 font-medium hover:cursor-pointer"
