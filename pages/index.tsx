@@ -65,7 +65,7 @@ export default function Home() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
-        <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
+        <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full text-white ">
           <Header finishedLoading={context.sharedState.finishedLoading} sectionsRef={homeRef} delta={delta} />
           <MyName finishedLoading={context.sharedState.finishedLoading} delta={delta} />
           <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} delta={delta} />
