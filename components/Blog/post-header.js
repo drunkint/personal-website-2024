@@ -9,7 +9,7 @@ export default function PostHeader({ title, coverImage, date, tags }) {
   return (
     <div className="py-4 mx-auto lg:py-24 lg:mx-auto max-w-4xl">
       <button
-        className="text-lg text-AAsecondary rounded-lg pl-4 py-2 hover:bg-AAtertiary "
+        className="text-lg text-AAsecondary rounded-lg px-4 py-2 hover:bg-AAtertiary "
         type="button"
         onClick={() => router.back()}
       >

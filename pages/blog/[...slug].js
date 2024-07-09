@@ -3,6 +3,7 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import ScreenSizeDetector from "../../components/CustomComponents/ScreenSizeDetector"
+import SocialMediaArround from '../../components/Home/SocialMediaArround/SocialMediaArround'
 
 // import Header from '../../components/Header/Header'
 import PostHeader from "../../components/Blog/post-header";
@@ -41,9 +42,8 @@ export default function Post({ post, morePosts, preview }) {
                 tags={post.tags}
               />
             <PostBody content={post.content} className='mb-48'/>
-            {/* <SocialMediaArround finishedLoading={true} />
-                  test
-                  <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} /> */}
+            <SocialMediaArround finishedLoading={true} />
+            {/* <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} /> */}
             {!isProd && <ScreenSizeDetector />}
           </article>
         </div>

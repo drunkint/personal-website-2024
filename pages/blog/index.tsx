@@ -31,9 +31,8 @@ export default function Posts({ allPosts }) {
 
       <BlogTable allPosts={allPosts} />
 
-      {/* <SocialMediaArround finishedLoading={true} />
-          test
-          <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} /> */}
+      <SocialMediaArround finishedLoading={true} />
+    {/* <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} /> */}
       {!isProd && <ScreenSizeDetector />}
     </div>
   );
