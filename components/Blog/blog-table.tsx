@@ -1,3 +1,8 @@
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from 'next/navigation'
+
+
 const formatDate = (date: string) => {
   const dateString = new Date(date).toDateString();
   const dateArrayWithoutWeek = dateString.split(" ").slice(1);
@@ -33,6 +38,31 @@ const getAllTags = (allPosts) => {
 };
 
 export default function BlogTable({ allPosts }) {
+  const [postsToShow, setPostsToShow] = useState(allPosts);
+  const router = useRouter();
+
+  const filterPosts = (filterText: string) => {
+    const lowerFilterText = filterText.toLocaleLowerCase();
+    const constructingPostsToShow = [];
+    allPosts.forEach((post) => {
+      // check if any of the tags contains filter text
+      if (
+        post.tags.some((tag) => tag.toLowerCase().includes(lowerFilterText))
+      ) {
+        constructingPostsToShow.push(post);
+        return;
+      }
+
+      // check if the title contains filter text
+      if (post.title.toLowerCase().includes(lowerFilterText)) {
+        constructingPostsToShow.push(post);
+        return;
+      }
+    });
+
+    setPostsToShow(constructingPostsToShow);
+  };
+
   return (
     <div className="flex flex-col max-w-3xl mx-auto font-Header text-gray-300 tracking-wider py-48">
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -88,60 +118,72 @@ export default function BlogTable({ allPosts }) {
                 type="search"
                 autoComplete="off"
                 id="default-search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
+                className="block w-full p-4 ps-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
                 placeholder="Search for titles and tags"
                 required
-                
+                onChange={(e) => filterPosts(e.target.value)}
               />
-              <button
+              {/* <button
                 type="submit"
                 className="text-white absolute end-2.5 bottom-2.5 bg-AAtertiary hover:bg-AAsecondary focus:outline-none focus:ring-insert font-medium rounded-lg text-sm px-4 py-2 "
               >
                 Search
-              </button>
+              </button> */}
             </div>
           </form>
 
           {/* table */}
           <div className="overflow-hidden py-24">
-            <table className="min-w-full text-left text-sm font-light text-surface dark:text-white">
-              <thead className="border-b border-neutral-200 font-medium dark:border-white/10">
-                <tr>
-                  <th scope="col" className="px-6 py-4">
-                    Date
-                  </th>
-                  <th scope="col" className="px-6 py-4">
-                    Title
-                  </th>
-                  <th scope="col" className="px-6 py-4">
-                    Tags
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {allPosts.map((post) => (
-                  <tr className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 ">
-                    <td className="whitespace-nowrap px-6 py-4 font-medium">
-                      {formatDate(post.date)}
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4">
-                      {post.title}
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4">
-                      {post.tags.map((tag) => (
-                        <span className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1">
-                          <span
-                            aria-hidden
-                            className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full"
-                          ></span>
-                          <span className="relative">{tag}</span>
-                        </span>
-                      ))}
-                    </td>
+            {postsToShow.length === 0 ? (
+              <div></div>
+            ) : (
+              <table className="min-w-full text-left text-md font-light text-surface dark:text-white table-fixed">
+                <thead className="border-b border-neutral-200 font-medium dark:border-white/10">
+                  <tr>
+                    <th scope="col" className="px-6 py-4">
+                      Date
+                    </th>
+                    <th scope="col" className="px-6 py-4">
+                      Title
+                    </th>
+                    <th scope="col" className="px-6 py-4">
+                      Tags
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {postsToShow.map((post) => (
+                    <tr
+                      className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
+                      key={post.title}
+                      onClick={() => router.push(`/blog/${post.slug}`)}
+                    >
+                      <td className="whitespace-nowrap px-6 py-4 font-medium">
+                        {formatDate(post.date)}
+                      </td>
+                      
+                      <td className="whitespace-nowrap px-6 py-4">
+                      {/* <Link href={`/blog/${post.slug}`}> */}
+                        {post.title}
+                        {/* </Link> */}
+                      </td>
+                      
+                      <td className="whitespace-nowrap px-6 py-4">
+                        {post.tags.map((tag) => (
+                          <span className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1">
+                            <span
+                              aria-hidden
+                              className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "
+                            ></span>
+                            <span className="relative">{tag}</span>
+                          </span>
+                        ))}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
           </div>
         </div>
       </div>
