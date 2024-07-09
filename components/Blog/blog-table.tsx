@@ -12,22 +12,6 @@ const formatDate = (date: string) => {
   return dateStringWithoutWeek;
 };
 
-const formatTags = (tags: string[]) => {
-  return tags.map((tag) => (
-    <span
-      key={tag}
-      className="relative inline-block px-2 py-1 font-semibold text-AAsecondary mx-1"
-    >
-      <span
-        aria-hidden
-        className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "
-      ></span>
-      <span className="relative">{tag}</span>
-    </span>
-  ));
-
-}
-
 const getAllTags = (allPosts) => {
   const tagToCount = new Map<string, number>();
   allPosts.forEach((post) => {
@@ -90,6 +74,25 @@ export default function BlogTable({ allPosts }) {
 
     setPostsToShow(constructingPostsToShow);
   };
+
+  const formatTags = (tags: string[]) => {
+    return tags.map((tag) => (
+      <span
+        key={tag}
+        className="relative inline-block px-2 py-1 font-semibold text-AAsecondary mx-1 hover:cursor-pointer"
+        onClick={() => {
+          setSearchText(tag);
+          filterPosts(tag);
+        }}
+      >
+        <span
+          aria-hidden
+          className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "
+        ></span>
+        <span className="relative">{tag}</span>
+      </span>
+    ));
+  }
 
   return (
     <div className="flex flex-col max-w-3xl mx-auto font-Header text-gray-300 tracking-wider lg:py-36">
@@ -183,15 +186,18 @@ export default function BlogTable({ allPosts }) {
                   {postsToShow.map((post) => (
                     <li
                       key={post.title}
-                      className="flex justify-between gap-x-6 py-5 hover:cursor-pointer"
-                      onClick={(e) => {
-                        localStorage.setItem("searchText", searchText);
-                        router.push(`/blog/${post.slug}`);
-                      }}
+                      className="flex justify-between gap-x-6 py-5"
+                      
                     >
                       <div className="flex min-w-0 gap-x-4">
                         <div className="min-w-0 flex-auto">
-                          <p className="text-lg font-semibold leading-6 text-gray-300">
+                          <p
+                            className="text-lg font-semibold leading-6 text-gray-300 hover:cursor-pointer"
+                            onClick={(e) => {
+                              localStorage.setItem("searchText", searchText);
+                              router.push(`/blog/${post.slug}`);
+                            }}
+                            >
                             {post.title}
                           </p>
                           <p className="mt-1 truncate text-xs leading-5 text-gray-300">
@@ -221,18 +227,26 @@ export default function BlogTable({ allPosts }) {
                   <tbody>
                     {postsToShow.map((post) => (
                       <tr
-                        className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
+                        className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 "
                         key={post.title}
-                        onClick={(e) => {
-                          localStorage.setItem("searchText", searchText);
-                          router.push(`/blog/${post.slug}`);
-                        }}
                       >
-                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                        <td 
+                          className="whitespace-nowrap px-6 py-4 font-medium hover:cursor-pointer"
+                          onClick={(e) => {
+                            localStorage.setItem("searchText", searchText);
+                            router.push(`/blog/${post.slug}`);
+                          }}
+                          >
                           {formatDate(post.date)}
                         </td>
 
-                        <td className=" px-6 py-4">
+                        <td 
+                          className=" px-6 py-4 hover:cursor-pointer"
+                          onClick={(e) => {
+                            localStorage.setItem("searchText", searchText);
+                            router.push(`/blog/${post.slug}`);
+                          }}
+                          >
                           {post.title}
                         </td>
 
