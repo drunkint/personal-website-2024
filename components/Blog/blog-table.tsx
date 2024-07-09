@@ -127,7 +127,7 @@ export default function BlogTable({ allPosts }) {
             </div>
           </div> */}
           {/* Search Bar */}
-          <form className="max-w-sm sm:max-w-md mx-auto">
+          <form className="max-w-xs sm:max-w-md mx-auto">
             {/* <label
               htmlFor="default-search"
               className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
