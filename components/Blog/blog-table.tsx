@@ -12,6 +12,22 @@ const formatDate = (date: string) => {
   return dateStringWithoutWeek;
 };
 
+const formatTags = (tags: string[]) => {
+  return tags.map((tag) => (
+    <span
+      key={tag}
+      className="relative inline-block px-2 py-1 font-semibold text-AAsecondary mx-1"
+    >
+      <span
+        aria-hidden
+        className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "
+      ></span>
+      <span className="relative">{tag}</span>
+    </span>
+  ));
+
+}
+
 const getAllTags = (allPosts) => {
   const tagToCount = new Map<string, number>();
   allPosts.forEach((post) => {
@@ -76,14 +92,14 @@ export default function BlogTable({ allPosts }) {
   };
 
   return (
-    <div className="flex flex-col max-w-3xl mx-auto font-Header text-gray-300 tracking-wider py-36">
+    <div className="flex flex-col max-w-3xl mx-auto font-Header text-gray-300 tracking-wider lg:py-36">
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
           {/* Back Button  */}
           <button
             className="text-lg text-AAsecondary rounded-lg px-4 py-2 mb-16 hover:bg-AAtertiary "
             type="button"
-            onClick={() => router.push('/')}
+            onClick={() => router.push("/")}
           >
             Back
           </button>
@@ -157,63 +173,77 @@ export default function BlogTable({ allPosts }) {
           </form>
 
           {/* table */}
-          <div className="overflow-hidden py-24">
+          <div className="overflow-hidden py-24 ">
             {postsToShow.length === 0 ? (
               <div></div>
             ) : (
-              <table className="min-w-full text-left text-md font-light text-surface dark:text-white table-fixed">
-                <thead className="border-b border-neutral-200 font-medium dark:border-white/10">
-                  <tr>
-                    <th scope="col" className="px-6 py-4">
-                      Date
-                    </th>
-                    <th scope="col" className="px-6 py-4">
-                      Title
-                    </th>
-                    <th scope="col" className="px-6 py-4">
-                      Tags
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
+              <>
+                {/* Mobile List  */}
+                <ul role="list" className="block lg:hidden divide-y divide-AAtertiary px-10">
                   {postsToShow.map((post) => (
-                    <tr
-                      className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
+                    <li
                       key={post.title}
+                      className="flex justify-between gap-x-6 py-5 hover:cursor-pointer"
                       onClick={(e) => {
                         localStorage.setItem("searchText", searchText);
                         router.push(`/blog/${post.slug}`);
-                        // router.refresh();
                       }}
                     >
-                      <td className="whitespace-nowrap px-6 py-4 font-medium">
-                        {formatDate(post.date)}
-                      </td>
-
-                      <td className=" px-6 py-4">
-                        {/* <Link href={`/blog/${post.slug}`}> */}
-                        {post.title}
-                        {/* </Link> */}
-                      </td>
-
-                      <td className=" px-6 py-4">
-                        {post.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1"
-                          >
-                            <span
-                              aria-hidden
-                              className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "
-                            ></span>
-                            <span className="relative">{tag}</span>
-                          </span>
-                        ))}
-                      </td>
-                    </tr>
+                      <div className="flex min-w-0 gap-x-4">
+                        <div className="min-w-0 flex-auto">
+                          <p className="text-lg font-semibold leading-6 text-gray-300">
+                            {post.title}
+                          </p>
+                          <p className="mt-1 truncate text-xs leading-5 text-gray-300">
+                            {formatDate(post.date)} {' '} {formatTags(post.tags)}
+                          </p>
+                        </div>
+                      </div>
+                    </li>
                   ))}
-                </tbody>
-              </table>
+                </ul>
+
+                {/* Desktop Table  */}
+                <table className="hidden lg:block min-w-full text-left text-md font-light text-surface dark:text-white table-fixed">
+                  <thead className="border-b border-neutral-200 font-medium dark:border-white/10">
+                    <tr>
+                      <th scope="col" className="px-6 py-4">
+                        Date
+                      </th>
+                      <th scope="col" className="px-6 py-4">
+                        Title
+                      </th>
+                      <th scope="col" className="px-6 py-4">
+                        Tags
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {postsToShow.map((post) => (
+                      <tr
+                        className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
+                        key={post.title}
+                        onClick={(e) => {
+                          localStorage.setItem("searchText", searchText);
+                          router.push(`/blog/${post.slug}`);
+                        }}
+                      >
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          {formatDate(post.date)}
+                        </td>
+
+                        <td className=" px-6 py-4">
+                          {post.title}
+                        </td>
+
+                        <td className=" px-6 py-4">
+                          {formatTags(post.tags)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
             )}
           </div>
         </div>
