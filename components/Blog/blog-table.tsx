@@ -156,7 +156,7 @@ export default function BlogTable({ allPosts }) {
                 type="search"
                 autoComplete="off"
                 id="default-search"
-                className="block w-full p-4 ps-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
+                className="block w-full p-4 ps-10 text-md border rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white "
                 placeholder="Search for titles and tags"
                 required
                 onChange={(e) => {
