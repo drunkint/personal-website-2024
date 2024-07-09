@@ -16,7 +16,6 @@ const formatDate = (date: string) => {
 
 const getAllTags = (allPosts) => {
   const tagToCount = new Map<string, number>();
-  console.log("!!!" + JSON.stringify(allPosts));
   allPosts.forEach((post) => {
     const currentTags = post.tags;
     currentTags.forEach((tag) => {
@@ -51,7 +50,7 @@ export default function BlogTable({ allPosts }) {
       setSearchText(cachedSearchText);
       filterPosts(cachedSearchText);
     }
-  }, []);
+  });
 
   const filterPosts = (filterText: string) => {
     if (!filterText) {
@@ -123,9 +122,9 @@ export default function BlogTable({ allPosts }) {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                   />
                 </svg>
@@ -194,7 +193,7 @@ export default function BlogTable({ allPosts }) {
                       
                       <td className="whitespace-nowrap px-6 py-4">
                         {post.tags.map((tag) => (
-                          <span className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1">
+                          <span key={tag} className="relative inline-block px-3 py-1 font-semibold text-AAsecondary  mx-1">
                             <span
                               aria-hidden
                               className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "

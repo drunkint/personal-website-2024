@@ -14,9 +14,9 @@ export default function Post({ post, morePosts, preview }) {
   const isProd = process.env.NODE_ENV === "production";
 
 
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
+  // if (!router.isFallback && !post?.slug) {
+  //   return <ErrorPage statusCode={404} />;
+  // }
 
 
   return (
