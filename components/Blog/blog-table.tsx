@@ -50,7 +50,7 @@ export default function BlogTable({ allPosts }) {
       setSearchText(cachedSearchText);
       filterPosts(cachedSearchText);
     }
-  });
+  }, []);
 
   const filterPosts = (filterText: string) => {
     if (!filterText) {
@@ -176,9 +176,10 @@ export default function BlogTable({ allPosts }) {
                     <tr
                       className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
                       key={post.title}
-                      onClick={() => {
+                      onClick={(e) => {
                         localStorage.setItem('searchText', searchText);
                         router.push(`/blog/${post.slug}`);
+                        // router.refresh();
                       }}
                     >
                       <td className="whitespace-nowrap px-6 py-4 font-medium">

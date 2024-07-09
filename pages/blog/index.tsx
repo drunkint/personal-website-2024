@@ -4,6 +4,7 @@ import SocialMediaArround from "../../components/Home/SocialMediaArround/SocialM
 import Footer from "../../components/Footer/Footer";
 import ScreenSizeDetector from "../../components/CustomComponents/ScreenSizeDetector";
 import BlogTable from "../../components/Blog/blog-table";
+import Head from "next/head";
 
 const formatDate = (date: string) => {
   const dateString = new Date(date).toDateString();
@@ -21,7 +22,12 @@ export default function Posts({ allPosts }) {
 
   return (
     <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full text-gray-300">
-      
+      <Head>
+        <title>
+          Blog | Angus Lee | 李旭紳 👉 I build digital solutions 💪
+        </title>
+        <meta property="og:image" content='/img/cover-page.jpg' />
+      </Head>
       <BlogTable allPosts={allPosts} />
 
       {/* <SocialMediaArround finishedLoading={true} />
