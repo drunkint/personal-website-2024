@@ -190,13 +190,13 @@ export default function BlogTable({ allPosts }) {
                         {formatDate(post.date)}
                       </td>
 
-                      <td className="whitespace-nowrap px-6 py-4">
+                      <td className=" px-6 py-4">
                         {/* <Link href={`/blog/${post.slug}`}> */}
                         {post.title}
                         {/* </Link> */}
                       </td>
 
-                      <td className="whitespace-nowrap px-6 py-4">
+                      <td className=" px-6 py-4">
                         {post.tags.map((tag) => (
                           <span
                             key={tag}

@@ -1,5 +1,5 @@
 ---
-title: '試試看中文行不行'
+title: '試試看中文行不行 some text to make this title longer longer and longer'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/blog/2022-05/FullMoon2010.jpg'
 date: '2020-03-15T05:35:07.322Z'
