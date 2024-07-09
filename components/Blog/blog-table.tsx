@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
+
 
 
 const formatDate = (date: string) => {
@@ -39,9 +41,23 @@ const getAllTags = (allPosts) => {
 
 export default function BlogTable({ allPosts }) {
   const [postsToShow, setPostsToShow] = useState(allPosts);
+  const [searchText, setSearchText] = useState('');
   const router = useRouter();
 
+
+  useEffect(() => {
+    const cachedSearchText: string = localStorage.getItem('searchText');
+    if (cachedSearchText != null) {
+      setSearchText(cachedSearchText);
+      filterPosts(cachedSearchText);
+    }
+  }, []);
+
   const filterPosts = (filterText: string) => {
+    if (!filterText) {
+      return setPostsToShow(allPosts);
+    }
+
     const lowerFilterText = filterText.toLocaleLowerCase();
     const constructingPostsToShow = [];
     allPosts.forEach((post) => {
@@ -121,7 +137,12 @@ export default function BlogTable({ allPosts }) {
                 className="block w-full p-4 ps-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
                 placeholder="Search for titles and tags"
                 required
-                onChange={(e) => filterPosts(e.target.value)}
+                onChange={(e) => {
+                  filterPosts(e.target.value);
+                  setSearchText(e.target.value);
+                  localStorage.setItem('searchText', e.target.value);
+                }}
+                value={searchText}
               />
               {/* <button
                 type="submit"
@@ -156,7 +177,10 @@ export default function BlogTable({ allPosts }) {
                     <tr
                       className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 hover:cursor-pointer"
                       key={post.title}
-                      onClick={() => router.push(`/blog/${post.slug}`)}
+                      onClick={() => {
+                        localStorage.setItem('searchText', searchText);
+                        router.push(`/blog/${post.slug}`);
+                      }}
                     >
                       <td className="whitespace-nowrap px-6 py-4 font-medium">
                         {formatDate(post.date)}

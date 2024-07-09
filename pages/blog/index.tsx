@@ -18,6 +18,7 @@ const formatDate = (date: string) => {
 export default function Posts({ allPosts }) {
   const isProd = process.env.NODE_ENV === "production";
 
+
   return (
     <div className="relative snap-mandatory min-h-screen bg-AAprimary w-full text-gray-300">
       

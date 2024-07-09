@@ -2,10 +2,17 @@ import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import Img from '../smallComp/image/Img';
+import { useRouter } from "next/router";
 
 export default function PostHeader({ title, coverImage, date, tags }) {
+  const router = useRouter();
   return (
     <div className="py-24 mx-auto max-w-3xl">
+      <button 
+        className="text-lg text-AAsecondary rounded-lg px-4 py-2 hover:bg-AAtertiary "
+        type="button"
+        onClick={() => router.back()}
+      >Back</button>
       <h1 className="text-gray-300 font-bold text-3xl lg:text-7xl sm:text-5xl md:text-6xl mt-4 py-8">
         {title}
       </h1>
@@ -23,7 +30,7 @@ export default function PostHeader({ title, coverImage, date, tags }) {
           // <span class="bg-#3B4252 text-AAsecondary text-italic">
           //   #{tag}
           // </span>
-          <span key='tag' className="bg-AAtertiary text-AAsecondary text-lg font-medium me-2 px-2.5 py-0.5 rounded-full">
+          <span key={tag} className="bg-AAtertiary text-AAsecondary text-lg font-medium me-2 px-2.5 py-0.5 rounded-full">
             {tag}
           </span>
         ))}
