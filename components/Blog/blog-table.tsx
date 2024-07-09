@@ -89,7 +89,7 @@ export default function BlogTable({ allPosts }) {
           aria-hidden
           className="absolute inset-0 bg-AAtertiary opacity-50 rounded-full "
         ></span>
-        <span className="relative">{tag}</span>
+        <span className="relative text-sm">{tag}</span>
       </span>
     ));
   }
@@ -200,7 +200,7 @@ export default function BlogTable({ allPosts }) {
                             >
                             {post.title}
                           </p>
-                          <p className="mt-1 truncate text-xs leading-5 text-gray-300">
+                          <p className="mt-1 text-xs leading-5 text-gray-300">
                             {formatDate(post.date)} {' '} {formatTags(post.tags)}
                           </p>
                         </div>
@@ -241,7 +241,7 @@ export default function BlogTable({ allPosts }) {
                         </td>
 
                         <td 
-                          className=" px-6 py-4 hover:cursor-pointer"
+                          className=" px-6 py-4 hover:cursor-pointer text-lg"
                           onClick={(e) => {
                             localStorage.setItem("searchText", searchText);
                             router.push(`/blog/${post.slug}`);
