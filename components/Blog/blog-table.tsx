@@ -211,7 +211,7 @@ export default function BlogTable({ allPosts }) {
 
                 {/* Desktop Table  */}
                 <table className="hidden lg:block min-w-full text-left text-md font-light text-surface dark:text-white table-fixed">
-                  <thead className="border-b border-neutral-200 font-medium dark:border-white/10">
+                  <thead className="border-b font-medium border-white/10">
                     <tr>
                       <th scope="col" className="px-6 py-4">
                         Date
@@ -227,7 +227,7 @@ export default function BlogTable({ allPosts }) {
                   <tbody>
                     {postsToShow.map((post) => (
                       <tr
-                        className="border-b border-neutral-200 transition duration-300 ease-in-out hover:bg-AAtertiary dark:border-white/10 "
+                        className="border-b transition duration-300 ease-in-out hover:bg-AAtertiary border-white/10 "
                         key={post.title + post.date}
                       >
                         <td 
