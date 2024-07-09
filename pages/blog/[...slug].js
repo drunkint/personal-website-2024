@@ -18,9 +18,6 @@ export default function Post({ post, morePosts, preview }) {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log('!!! title is '  + post.title)
-  console.log('!!! type is '  + typeof(post.title))
-
 
   return (
     <>
@@ -28,11 +25,12 @@ export default function Post({ post, morePosts, preview }) {
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
-        <>
-          <article className="relative snap-mandatory min-h-screen bg-AAprimary w-full ">
+        <div>
+          <article className="h-full bg-AAprimary w-full ">
             <Head>
               <title>{post.title} | Angus Blog</title>
               {/* <meta property="og:image" content={post.ogImage.url} /> */}
+
             </Head>
             
             <PostHeader
@@ -42,13 +40,13 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
                 tags={post.tags}
               />
-            <PostBody content={post.content} />
+            <PostBody content={post.content} className='mb-48'/>
             {/* <SocialMediaArround finishedLoading={true} />
                   test
                   <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} /> */}
             {!isProd && <ScreenSizeDetector />}
           </article>
-        </>
+        </div>
       )}
     </>
   );

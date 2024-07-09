@@ -23,7 +23,7 @@ export default function PostHeader({ title, coverImage, date, tags }) {
           // <span class="bg-#3B4252 text-AAsecondary text-italic">
           //   #{tag}
           // </span>
-          <span class="bg-AAtertiary text-AAsecondary text-lg font-medium me-2 px-2.5 py-0.5 rounded-full">
+          <span key='tag' className="bg-AAtertiary text-AAsecondary text-lg font-medium me-2 px-2.5 py-0.5 rounded-full">
             {tag}
           </span>
         ))}
