@@ -26,7 +26,7 @@ export default function Post({ post, morePosts, preview }) {
         <PostTitle>Loading…</PostTitle>
       ) : (
         <div>
-          <article className="h-full bg-AAprimary w-full ">
+          <article className="h-full bg-AAprimary w-full">
             <Head>
               <title>{post.title} | Angus Blog</title>
               {/* <meta property="og:image" content={post.ogImage.url} /> */}

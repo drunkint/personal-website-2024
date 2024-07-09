@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 export default function PostHeader({ title, coverImage, date, tags }) {
   const router = useRouter();
   return (
-    <div className="py-24 mx-auto max-w-3xl">
+    <div className="py-4 mx-auto lg:py-24 lg:mx-auto max-w-4xl">
       <button
         className="text-lg text-AAsecondary rounded-lg px-4 py-2 hover:bg-AAtertiary "
         type="button"
@@ -15,10 +15,10 @@ export default function PostHeader({ title, coverImage, date, tags }) {
       >
         Back
       </button>
-      <h1 className="text-gray-300 font-bold text-3xl lg:text-7xl sm:text-5xl md:text-6xl mt-4 py-8">
+      <h1 className="text-gray-300 font-bold text-7xl px-3 mt-4 py-8">
         {title}
       </h1>
-      <div className="mb-6 text-lg text-gray-300">
+      <div className="mb-6 text-lg text-gray-300 px-4 mx-auto">
         <DateFormatter dateString={date} />
         <div>
           {/* tags: {
